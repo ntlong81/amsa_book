@@ -1,4 +1,4 @@
-# Giáo trình Thực hành Phân tích Dữ liệu và Mô hình hóa với Python
+# Giáo trình Phân tích Thống kê Đa biến Ứng dụng trong Kinh tế, Tài chính và Kinh doanh
 
 🌟 **Đọc sách trực tuyến miễn phí tại:** [https://ntlong81.github.io/amsa_book/](https://ntlong81.github.io/amsa_book/) 🌟
 
