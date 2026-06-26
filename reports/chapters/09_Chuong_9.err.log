@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Bước 0: Vẽ ACF và PACF cho từng chuỗi — công cụ chẩn đoán ban đầu
+fig, axes = plt.subplots(3, 2, figsize=(14, 10))
+series_names = ['VNIBOR', 'USDVND_log', 'VNIndex_log']
+for row, col_name in enumerate(series_names):
+    series = df[col_name]
+    plot_acf(series, lags=24, ax=axes[row, 0], title=f'ACF — {col_name}',
+             color='#3498db', vlines_kwargs={'colors': '#3498db'})
+    plot_pacf(series, lags=24, ax=axes[row, 1], title=f'PACF — {col_name}',
+              color='#e74c3c', vlines_kwargs={'colors': '#e74c3c'})
+    axes[row, 0].set_xlabel('Độ trễ (tháng)')
+    axes[row, 1].set_xlabel('Độ trễ (tháng)')
+
+fig.suptitle("Hàm tự tương quan (ACF) và Tự tương quan riêng phần (PACF)\n"
+             "Các chuỗi gốc — Chẩn đoán tính dừng",
+             fontsize=12, fontweight='bold', y=1.01)
+plt.tight_layout()
+plt.show()
+print("Đọc kết quả:")
+print("  - ACF chuỗi gốc giảm chậm → dấu hiệu chuỗi không dừng (I(1))")
+print("  - ACF sai phân cắt đứt nhanh → dấu hiệu chuỗi dừng")
+print("  - Vùng xanh = dải tin cậy 95% (|rho| < 2/sqrt(T) ≈ {:.3f})".format(2/len(df)**0.5))
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mNameError[0m                                 Traceback (most recent call last)
+Cell [1;32mIn[1], line 2[0m
+[0;32m      1[0m [38;5;66;03m# Bước 0: Vẽ ACF và PACF cho từng chuỗi — công cụ chẩn đoán ban đầu[39;00m
+[1;32m----> 2[0m fig, axes [38;5;241m=[39m plt[38;5;241m.[39msubplots([38;5;241m3[39m, [38;5;241m2[39m, figsize[38;5;241m=[39m([38;5;241m14[39m, [38;5;241m10[39m))
+[0;32m      3[0m series_names [38;5;241m=[39m [[38;5;124m'[39m[38;5;124mVNIBOR[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mUSDVND_log[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mVNIndex_log[39m[38;5;124m'[39m]
+[0;32m      4[0m [38;5;28;01mfor[39;00m row, col_name [38;5;129;01min[39;00m [38;5;28menumerate[39m(series_names):
+
+[1;31mNameError[0m: name 'plt' is not defined
+

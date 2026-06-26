@@ -1,0 +1,772 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Hướng dẫn thực thi: &#8212; Giáo trình Phân tích Thống kê Đa biến Ứng dụng trong Kinh tế, Tài chính và Kinh doanh</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_agents/word_count_guard';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../chapters/00_Loi_Noi_Dau.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Giáo trình Phân tích Thống kê Đa biến Ứng dụng trong Kinh tế, Tài chính và Kinh doanh</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../chapters/00_Loi_Noi_Dau.html">
+                    LỜI NÓI ĐẦU
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapters/01_Chuong_1.html">CHƯƠNG 1: CƠ SỞ TOÁN HỌC VÀ TỔNG QUAN VỀ PHÂN TÍCH ĐA BIẾN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/02_Chuong_2.html">CHƯƠNG 2: CHUẨN BỊ VÀ LÀM SẠCH DỮ LIỆU (DATA PREPROCESSING &amp; FEATURE ENGINEERING)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/03_Chuong_3.html">CHƯƠNG 3: TƯ DUY MÔ HÌNH HÓA ĐA BIẾN (MULTIVARIATE MODELING MINDSET)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/04_Chuong_4.html">CHƯƠNG 4: ĐƯỜNG ỐNG BIẾN TIỀM ẨN (PHẦN 1): PHÂN TÍCH THÀNH PHẦN CHÍNH (PCA) &amp; NHÂN TỐ KHÁM PHÁ (EFA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/05_Chuong_5.html">CHƯƠNG 5: PHÂN TÍCH CỤM (CLUSTER ANALYSIS) VÀ KHÁM PHÁ CẤU TRÚC NHÓM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/06_Chuong_6.html">CHƯƠNG 6: PHÂN TÍCH TƯƠNG QUAN, ANOVA VÀ HỒI QUY TUYẾN TÍNH BỘI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/07_Chuong_7.html">CHƯƠNG 7: PHÂN TÍCH BIỆT SỐ VÀ HỒI QUY LOGISTIC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/08_Chuong_8.html">CHƯƠNG 8: ĐƯỜNG ỐNG BIẾN TIỀM ẨN (PHẦN 2): CFA &amp; MÔ HÌNH PHƯƠNG TRÌNH CẤU TRÚC (SEM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/09_Chuong_9.html">CHƯƠNG 9: CHUỖI THỜI GIAN ĐA BIẾN (VAR/VECM) TRONG KINH TẾ TÀI CHÍNH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/10_Chuong_10.html">CHƯƠNG 10: TÍCH HỢP MACHINE LEARNING VÀ XAI (EXPLAINABLE AI) VÀO PHÂN TÍCH ĐA BIẾN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/11_Tong_Ket.html">TỔNG KẾT GIÁO TRÌNH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/99_Tai_Lieu_Tham_Khao.html">TÀI LIỆU THAM KHẢO (BIBLIOGRAPHY)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/_agents/word_count_guard.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hướng dẫn thực thi:</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Hướng dẫn thực thi:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-bo-dung-luong-toi-thieu-cho-tung-chuong-va-section-heading-2">Phân bổ Dung lượng Tối thiểu cho Từng Chương và Section (Heading 2)</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="huong-dan-thuc-thi">
+<h1>Hướng dẫn thực thi:<a class="headerlink" href="#huong-dan-thuc-thi" title="Permalink to this heading">#</a></h1>
+<p>Bạn là “người đếm từ” khắt khe nhất trong hệ thống. Nhiệm vụ của bạn là giám sát mọi bản thảo trước khi được chèn vào Notebook:</p>
+<ol class="arabic simple">
+<li><p><strong>Quy định về Định mức:</strong> Dung lượng tối thiểu cho từng Section (Heading 2) được phân bổ chi tiết dưới bảng phân phối bên dưới. Quy định này <strong>KHÔNG</strong> áp dụng cho các phần kết thúc chương như “Case Study Ứng dụng”, “Câu hỏi &amp; Bài tập”, và “Tóm tắt nội dung (Key Takeaways)”. Các phần kết thúc chương này cần viết cô đọng, súc tích và đúng trọng tâm.</p></li>
+<li><p><strong>Cơ chế Kiểm soát:</strong> Bạn quét nội dung theo từng cấu trúc Heading của phần nội dung chính. Nếu một Section không đạt chỉ tiêu tối thiểu quy định trong bảng phân phối, bạn phải từ chối (REJECT) và chỉ rõ Section đó cần bổ sung thêm dẫn chứng toán học hoặc lập luận kinh tế.</p></li>
+<li><p><strong>Báo cáo:</strong> Bạn phải gửi kèm thông báo “Đã kiểm duyệt: [Heading] - [Số từ/Số từ tối thiểu]” vào mỗi vòng feedback.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Luôn đảm bảo văn phong phù hợp với cấp độ sinh viên đại học (tuyệt đối không dùng từ chỉ cơ sở giáo dục cấp dưới).</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="phan-bo-dung-luong-toi-thieu-cho-tung-chuong-va-section-heading-2">
+<h1>Phân bổ Dung lượng Tối thiểu cho Từng Chương và Section (Heading 2)<a class="headerlink" href="#phan-bo-dung-luong-toi-thieu-cho-tung-chuong-va-section-heading-2" title="Permalink to this heading">#</a></h1>
+<p>Để đảm bảo giáo trình đạt quy mô khoảng 400 trang (tương đương tối thiểu 140,000 từ, tính trung bình 350 từ/trang), dung lượng tối thiểu cho từng mục lớn (Heading 2) được phân bổ chi tiết dựa trên mức độ chuyên sâu của lý thuyết và mức độ phức tạp của thực hành trong các tài liệu chuẩn (textbook).</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Chương / Section</p></th>
+<th class="head"><p>Tên Section</p></th>
+<th class="head"><p>Số từ Tối thiểu</p></th>
+<th class="head"><p>Tài liệu Đối chiếu Chính</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Chương 1</strong></p></td>
+<td><p></p></td>
+<td><p><strong>13,500 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>1.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>Johnson &amp; Wichern (Ch. 1)</p></td>
+</tr>
+<tr class="row-even"><td><p>1.2</p></td>
+<td><p>Nền tảng Toán học: Đại số Tuyến tính</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>Johnson &amp; Wichern (Ch. 2), Rencher (Ch. 2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.3</p></td>
+<td><p>Khoảng cách và Phân phối Xác suất</p></td>
+<td><p>3,500 từ</p></td>
+<td><p>Johnson &amp; Wichern (Ch. 3 &amp; 4), Rencher (Ch. 3)</p></td>
+</tr>
+<tr class="row-even"><td><p>1.4</p></td>
+<td><p>Phân loại kỹ thuật đa biến</p></td>
+<td><p>2,000 từ</p></td>
+<td><p>Hair et al. (Ch. 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>2,500 từ</p></td>
+<td><p>McKinney (Ch. 4 &amp; 5)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 2</strong></p></td>
+<td><p></p></td>
+<td><p><strong>14,500 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>Hair et al. (Ch. 2)</p></td>
+</tr>
+<tr class="row-even"><td><p>2.2</p></td>
+<td><p>Xử lý Dữ liệu khuyết thiếu và Ngoại lai</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>Hair et al. (Ch. 2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.3</p></td>
+<td><p>Kiểm định các giả định thống kê</p></td>
+<td><p>3,500 từ</p></td>
+<td><p>Hair et al. (Ch. 2), Johnson &amp; Wichern (Ch. 4)</p></td>
+</tr>
+<tr class="row-even"><td><p>2.4</p></td>
+<td><p>Data Transformation &amp; Feature Selection</p></td>
+<td><p>2,500 từ</p></td>
+<td><p>Hastie et al. (Ch. 3), Hair et al. (Ch. 2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>James et al. (Ch. 6)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 3</strong></p></td>
+<td><p></p></td>
+<td><p><strong>11,000 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>3.1</p></td>
+<td><p>Quá trình sinh dữ liệu (DGP)</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>Causal Inference literature / Pearl</p></td>
+</tr>
+<tr class="row-even"><td><p>3.2</p></td>
+<td><p>Hai hướng tiếp cận mô hình hóa</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>James et al. (Ch. 2), Hastie et al. (Ch. 2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.3</p></td>
+<td><p>Triết lý lựa chọn và Đánh giá mô hình</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>James et al. (Ch. 5)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 4</strong></p></td>
+<td><p></p></td>
+<td><p><strong>14,500 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>4.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>Hair et al. (Ch. 3)</p></td>
+</tr>
+<tr class="row-even"><td><p>4.2</p></td>
+<td><p>Principal Component Analysis (PCA)</p></td>
+<td><p>3,500 từ</p></td>
+<td><p>Johnson &amp; Wichern (Ch. 8), Rencher (Ch. 12)</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.3</p></td>
+<td><p>Exploratory Factor Analysis (EFA)</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>Johnson &amp; Wichern (Ch. 9), Rencher (Ch. 13)</p></td>
+</tr>
+<tr class="row-even"><td><p>4.4</p></td>
+<td><p>Đánh giá độ tin cậy của thang đo</p></td>
+<td><p>2,500 từ</p></td>
+<td><p>Hair et al. (Ch. 3)</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>Python <code class="docutils literal notranslate"><span class="pre">factor_analyzer</span></code> docs</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 5</strong></p></td>
+<td><p></p></td>
+<td><p><strong>14,500 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>5.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>Hair et al. (Ch. 15)</p></td>
+</tr>
+<tr class="row-even"><td><p>5.2</p></td>
+<td><p>Phân cụm Phân cấp (Hierarchical)</p></td>
+<td><p>3,500 từ</p></td>
+<td><p>Johnson &amp; Wichern (Ch. 12), Rencher (Ch. 15)</p></td>
+</tr>
+<tr class="row-odd"><td><p>5.3</p></td>
+<td><p>Phân cụm Phi phân cấp (K-Means/GMM)</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>Hastie et al. (Ch. 14), James et al. (Ch. 12)</p></td>
+</tr>
+<tr class="row-even"><td><p>5.4</p></td>
+<td><p>Đánh giá chất lượng Phân cụm</p></td>
+<td><p>2,500 từ</p></td>
+<td><p>Hair et al. (Ch. 15)</p></td>
+</tr>
+<tr class="row-odd"><td><p>5.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>Scikit-learn docs</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 6</strong></p></td>
+<td><p></p></td>
+<td><p><strong>15,500 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>6.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>Hair et al. (Ch. 6)</p></td>
+</tr>
+<tr class="row-even"><td><p>6.2</p></td>
+<td><p>Tương quan, Tương quan chính tắc &amp; ANOVA</p></td>
+<td><p>3,500 từ</p></td>
+<td><p>Johnson &amp; Wichern (Ch. 6), Rencher (Ch. 6)</p></td>
+</tr>
+<tr class="row-odd"><td><p>6.3</p></td>
+<td><p>Mô hình Hồi quy Tuyến tính Bội (OLS)</p></td>
+<td><p>4,500 từ</p></td>
+<td><p>Rencher (Ch. 10), Hair et al. (Ch. 4)</p></td>
+</tr>
+<tr class="row-even"><td><p>6.4</p></td>
+<td><p>Bước đệm sang Machine Learning</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>James et al. (Ch. 6), Hastie et al. (Ch. 3)</p></td>
+</tr>
+<tr class="row-odd"><td><p>6.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>Statsmodels / Scikit-learn docs</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 7</strong></p></td>
+<td><p></p></td>
+<td><p><strong>15,500 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>7.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>Hair et al. (Ch. 8)</p></td>
+</tr>
+<tr class="row-even"><td><p>7.2</p></td>
+<td><p>Phân tích Biệt số (LDA)</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>Johnson &amp; Wichern (Ch. 11), Rencher (Ch. 9)</p></td>
+</tr>
+<tr class="row-odd"><td><p>7.3</p></td>
+<td><p>Hồi quy Logistic</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>James et al. (Ch. 4), Hair et al. (Ch. 8)</p></td>
+</tr>
+<tr class="row-even"><td><p>7.4</p></td>
+<td><p>Đánh giá Mô hình Phân loại</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>James et al. (Ch. 4)</p></td>
+</tr>
+<tr class="row-odd"><td><p>7.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>Scikit-learn / Imbalanced-learn docs</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 8</strong></p></td>
+<td><p></p></td>
+<td><p><strong>15,500 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>8.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>Hair et al. (Ch. 16)</p></td>
+</tr>
+<tr class="row-even"><td><p>8.2</p></td>
+<td><p>Phân tích Nhân tố Khẳng định (CFA)</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>Hair et al. (Ch. 16 &amp; 17)</p></td>
+</tr>
+<tr class="row-odd"><td><p>8.3</p></td>
+<td><p>Mô hình Cấu trúc (SEM)</p></td>
+<td><p>4,500 từ</p></td>
+<td><p>Hair et al. (Ch. 18)</p></td>
+</tr>
+<tr class="row-even"><td><p>8.4</p></td>
+<td><p>CB-SEM vs. PLS-SEM</p></td>
+<td><p>2,500 từ</p></td>
+<td><p>Hair et al. (Ch. 18)</p></td>
+</tr>
+<tr class="row-odd"><td><p>8.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>Semopy documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 9</strong></p></td>
+<td><p></p></td>
+<td><p><strong>14,500 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>9.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>Time Series textbooks / Hamilton</p></td>
+</tr>
+<tr class="row-even"><td><p>9.2</p></td>
+<td><p>Tính dừng và Mô hình VAR</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>Econometrics textbooks</p></td>
+</tr>
+<tr class="row-odd"><td><p>9.3</p></td>
+<td><p>Đồng liên kết và Mô hình VECM</p></td>
+<td><p>3,500 từ</p></td>
+<td><p>Econometrics textbooks</p></td>
+</tr>
+<tr class="row-even"><td><p>9.4</p></td>
+<td><p>Hàm phản ứng xung và Phân rã phương sai</p></td>
+<td><p>2,500 từ</p></td>
+<td><p>Econometrics textbooks</p></td>
+</tr>
+<tr class="row-odd"><td><p>9.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>Statsmodels tsa docs</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chương 10</strong></p></td>
+<td><p></p></td>
+<td><p><strong>16,000 từ</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>10.1</p></td>
+<td><p>Tình huống dẫn dắt</p></td>
+<td><p>1,500 từ</p></td>
+<td><p>James et al. (Ch. 8)</p></td>
+</tr>
+<tr class="row-even"><td><p>10.2</p></td>
+<td><p>Decision Trees &amp; Ensemble Learning</p></td>
+<td><p>4,000 từ</p></td>
+<td><p>James et al. (Ch. 8), Hastie et al. (Ch. 9 &amp; 10)</p></td>
+</tr>
+<tr class="row-odd"><td><p>10.3</p></td>
+<td><p>Tối ưu hóa siêu tham số</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>James et al. (Ch. 5 &amp; 8)</p></td>
+</tr>
+<tr class="row-even"><td><p>10.4</p></td>
+<td><p>Mở “Hộp đen” với Explainable AI (XAI)</p></td>
+<td><p>4,500 từ</p></td>
+<td><p>XAI literature / Molnar</p></td>
+</tr>
+<tr class="row-odd"><td><p>10.5</p></td>
+<td><p>Thực hành Python</p></td>
+<td><p>3,000 từ</p></td>
+<td><p>XGBoost / SHAP documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Tổng cộng</strong></p></td>
+<td><p><strong>48 sections</strong></p></td>
+<td><p><strong>145,000 từ</strong></p></td>
+<td><p><strong>Tương đương ~414 trang sách</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_agents"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Hướng dẫn thực thi:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#phan-bo-dung-luong-toi-thieu-cho-tung-chuong-va-section-heading-2">Phân bổ Dung lượng Tối thiểu cho Từng Chương và Section (Heading 2)</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By TS. Nguyễn Mạnh Thế, TS. Vũ Thị Bích Ngọc, TS. Nguyễn Tuấn Long
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Data Dictionary: Customer Experience Survey Dataset &#8212; Giáo trình Phân tích Thống kê Đa biến Ứng dụng trong Kinh tế, Tài chính và Kinh doanh</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'case_studies/02_customer_experience/data_dictionary';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../chapters/00_Loi_Noi_Dau.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Giáo trình Phân tích Thống kê Đa biến Ứng dụng trong Kinh tế, Tài chính và Kinh doanh</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../chapters/00_Loi_Noi_Dau.html">
+                    LỜI NÓI ĐẦU
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/01_Chuong_1.html">CHƯƠNG 1: CƠ SỞ TOÁN HỌC VÀ TỔNG QUAN VỀ PHÂN TÍCH ĐA BIẾN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/02_Chuong_2.html">CHƯƠNG 2: CHUẨN BỊ VÀ LÀM SẠCH DỮ LIỆU (DATA PREPROCESSING &amp; FEATURE ENGINEERING)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/03_Chuong_3.html">CHƯƠNG 3: TƯ DUY MÔ HÌNH HÓA ĐA BIẾN (MULTIVARIATE MODELING MINDSET)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/04_Chuong_4.html">CHƯƠNG 4: ĐƯỜNG ỐNG BIẾN TIỀM ẨN (PHẦN 1): PHÂN TÍCH THÀNH PHẦN CHÍNH (PCA) &amp; NHÂN TỐ KHÁM PHÁ (EFA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/05_Chuong_5.html">CHƯƠNG 5: PHÂN TÍCH CỤM (CLUSTER ANALYSIS) VÀ KHÁM PHÁ CẤU TRÚC NHÓM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/06_Chuong_6.html">CHƯƠNG 6: PHÂN TÍCH TƯƠNG QUAN, ANOVA VÀ HỒI QUY TUYẾN TÍNH BỘI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/07_Chuong_7.html">CHƯƠNG 7: PHÂN TÍCH BIỆT SỐ VÀ HỒI QUY LOGISTIC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/08_Chuong_8.html">CHƯƠNG 8: ĐƯỜNG ỐNG BIẾN TIỀM ẨN (PHẦN 2): CFA &amp; MÔ HÌNH PHƯƠNG TRÌNH CẤU TRÚC (SEM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/09_Chuong_9.html">CHƯƠNG 9: CHUỖI THỜI GIAN ĐA BIẾN (VAR/VECM) TRONG KINH TẾ TÀI CHÍNH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/10_Chuong_10.html">CHƯƠNG 10: TÍCH HỢP MACHINE LEARNING VÀ XAI (EXPLAINABLE AI) VÀO PHÂN TÍCH ĐA BIẾN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/11_Tong_Ket.html">TỔNG KẾT GIÁO TRÌNH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapters/99_Tai_Lieu_Tham_Khao.html">TÀI LIỆU THAM KHẢO (BIBLIOGRAPHY)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/case_studies/02_customer_experience/data_dictionary.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Dictionary: Customer Experience Survey Dataset</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#survey-questions">Survey Questions:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data-dictionary-customer-experience-survey-dataset">
+<h1>Data Dictionary: Customer Experience Survey Dataset<a class="headerlink" href="#data-dictionary-customer-experience-survey-dataset" title="Permalink to this heading">#</a></h1>
+<p>This dataset simulates 1,000 customers answering a 15-question satisfaction survey using a 5-point Likert scale (1 = Strongly Disagree, 5 = Strongly Agree).</p>
+<p>The Data Generating Process (DGP) for this dataset inherently assumes that the answers to these 15 questions are driven by 3 unobserved <strong>Latent Variables (Factors)</strong>.</p>
+<section id="survey-questions">
+<h2>Survey Questions:<a class="headerlink" href="#survey-questions" title="Permalink to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>True Underlying Factor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Q1_Friendly</p></td>
+<td><p>“Staff was friendly”</p></td>
+<td><p>Service Quality</p></td>
+</tr>
+<tr class="row-odd"><td><p>Q2_Fast_Resolve</p></td>
+<td><p>“Issues were resolved quickly”</p></td>
+<td><p>Service Quality</p></td>
+</tr>
+<tr class="row-even"><td><p>Q3_Knowledgeable</p></td>
+<td><p>“Staff was knowledgeable”</p></td>
+<td><p>Service Quality</p></td>
+</tr>
+<tr class="row-odd"><td><p>Q4_Polite</p></td>
+<td><p>“Staff was polite”</p></td>
+<td><p>Service Quality</p></td>
+</tr>
+<tr class="row-even"><td><p>Q5_Accessible</p></td>
+<td><p>“Support was easy to access”</p></td>
+<td><p>Service Quality</p></td>
+</tr>
+<tr class="row-odd"><td><p>Q6_Durable</p></td>
+<td><p>“The product is durable”</p></td>
+<td><p>Product Quality</p></td>
+</tr>
+<tr class="row-even"><td><p>Q7_Reliable</p></td>
+<td><p>“The product is reliable”</p></td>
+<td><p>Product Quality</p></td>
+</tr>
+<tr class="row-odd"><td><p>Q8_Feature_Rich</p></td>
+<td><p>“The product has great features”</p></td>
+<td><p>Product Quality</p></td>
+</tr>
+<tr class="row-even"><td><p>Q9_Easy_Use</p></td>
+<td><p>“The product is easy to use”</p></td>
+<td><p>Product Quality</p></td>
+</tr>
+<tr class="row-odd"><td><p>Q10_Design</p></td>
+<td><p>“The product has a good design”</p></td>
+<td><p>Product Quality</p></td>
+</tr>
+<tr class="row-even"><td><p>Q11_Affordable</p></td>
+<td><p>“The product is affordable”</p></td>
+<td><p>Pricing Value</p></td>
+</tr>
+<tr class="row-odd"><td><p>Q12_Worth_Money</p></td>
+<td><p>“The product is worth the money”</p></td>
+<td><p>Pricing Value</p></td>
+</tr>
+<tr class="row-even"><td><p>Q13_Cheap_Maintenance</p></td>
+<td><p>“Maintenance is cheap”</p></td>
+<td><p>Pricing Value</p></td>
+</tr>
+<tr class="row-odd"><td><p>Q14_Good_Promotions</p></td>
+<td><p>“Promotions are attractive”</p></td>
+<td><p>Pricing Value</p></td>
+</tr>
+<tr class="row-even"><td><p>Q15_Competitive_Price</p></td>
+<td><p>“Price is competitive”</p></td>
+<td><p>Pricing Value</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./case_studies\02_customer_experience"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#survey-questions">Survey Questions:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By TS. Nguyễn Mạnh Thế, TS. Vũ Thị Bích Ngọc, TS. Nguyễn Tuấn Long
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

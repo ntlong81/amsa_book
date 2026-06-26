@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc
+from imblearn.over_sampling import SMOTE
+
+# Tải bộ dữ liệu chấm điểm tín dụng mất cân bằng
+data_path = r"e:\Code\amsa_book\case_studies\00_main_bank_churn\credit_scoring_imbalanced.csv"
+df_credit = pd.read_csv(data_path)
+
+print("Kích thước dữ liệu tín dụng:", df_credit.shape)
+print("\nTỷ lệ phân bố của biến mục tiêu vỡ nợ:")
+print(df_credit['SeriousDlqin2yrs'].value_counts(normalize=True).round(4) * 100)
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mImportError[0m                               Traceback (most recent call last)
+Cell [1;32mIn[1], line 11[0m
+[0;32m      9[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlinear_model[39;00m [38;5;28;01mimport[39;00m LogisticRegression
+[0;32m     10[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmetrics[39;00m [38;5;28;01mimport[39;00m classification_report, confusion_matrix, roc_curve, auc
+[1;32m---> 11[0m [38;5;28;01mfrom[39;00m [38;5;21;01mimblearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mover_sampling[39;00m [38;5;28;01mimport[39;00m SMOTE
+[0;32m     13[0m [38;5;66;03m# Tải bộ dữ liệu chấm điểm tín dụng mất cân bằng[39;00m
+[0;32m     14[0m data_path [38;5;241m=[39m [38;5;124mr[39m[38;5;124m"[39m[38;5;124me:[39m[38;5;124m\[39m[38;5;124mCode[39m[38;5;124m\[39m[38;5;124mamsa_book[39m[38;5;124m\[39m[38;5;124mcase_studies[39m[38;5;124m\[39m[38;5;124m00_main_bank_churn[39m[38;5;124m\[39m[38;5;124mcredit_scoring_imbalanced.csv[39m[38;5;124m"[39m
+
+File [1;32m~\anaconda3\Lib\site-packages\imblearn\__init__.py:52[0m
+[0;32m     48[0m     sys[38;5;241m.[39mstderr[38;5;241m.[39mwrite([38;5;124m"[39m[38;5;124mPartial import of imblearn during the build process.[39m[38;5;130;01m\n[39;00m[38;5;124m"[39m)
+[0;32m     49[0m     [38;5;66;03m# We are not importing the rest of scikit-learn during the build[39;00m
+[0;32m     50[0m     [38;5;66;03m# process, as it may not be compiled yet[39;00m
+[0;32m     51[0m [38;5;28;01melse[39;00m:
+[1;32m---> 52[0m     [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m (
+[0;32m     53[0m         combine,
+[0;32m     54[0m         ensemble,
+[0;32m     55[0m         exceptions,
+[0;32m     56[0m         metrics,
+[0;32m     57[0m         over_sampling,
+[0;32m     58[0m         pipeline,
+[0;32m     59[0m         tensorflow,
+[0;32m     60[0m         under_sampling,
+[0;32m     61[0m         utils,
+[0;32m     62[0m     )
+[0;32m     63[0m     [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m_version[39;00m [38;5;28;01mimport[39;00m __version__
+[0;32m     64[0m     [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m [38;5;28;01mimport[39;00m FunctionSampler
+
+File [1;32m~\anaconda3\Lib\site-packages\imblearn\combine\__init__.py:5[0m
+[0;32m      1[0m [38;5;124;03m"""The :mod:`imblearn.combine` provides methods which combine[39;00m
+[0;32m      2[0m [38;5;124;03mover-sampling and under-sampling.[39;00m
+[0;32m      3[0m [38;5;124;03m"""[39;00m
+[1;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m_smote_enn[39;00m [38;5;28;01mimport[39;00m SMOTEENN
+[0;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m_smote_tomek[39;00m [38;5;28;01mimport[39;00m SMOTETomek
+[0;32m      8[0m __all__ [38;5;241m=[39m [[38;5;124m"[39m[38;5;124mSMOTEENN[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mSMOTETomek[39m[38;5;124m"[39m]
+
+File [1;32m~\anaconda3\Lib\site-packages\imblearn\combine\_smote_enn.py:12[0m
+[0;32m      9[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m [38;5;28;01mimport[39;00m clone
+[0;32m     10[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mutils[39;00m [38;5;28;01mimport[39;00m check_X_y
+[1;32m---> 12[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m [38;5;28;01mimport[39;00m BaseSampler
+[0;32m     13[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mover_sampling[39;00m [38;5;28;01mimport[39;00m SMOTE
+[0;32m     14[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mover_sampling[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m [38;5;28;01mimport[39;00m BaseOverSampler
+
+File [1;32m~\anaconda3\Lib\site-packages\imblearn\base.py:20[0m
+[0;32m     17[0m     [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m [38;5;28;01mimport[39;00m _OneToOneFeatureMixin [38;5;28;01mas[39;00m OneToOneFeatureMixin
+[0;32m     19[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpreprocessing[39;00m [38;5;28;01mimport[39;00m label_binarize
+[1;32m---> 20[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mutils[39;00m [38;5;28;01mimport[39;00m parse_version
+[0;32m     21[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mutils[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmulticlass[39;00m [38;5;28;01mimport[39;00m check_classification_targets
+[0;32m     23[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mutils[39;00m [38;5;28;01mimport[39;00m check_sampling_strategy, check_target_type
+
+[1;31mImportError[0m: cannot import name 'parse_version' from 'sklearn.utils' (C:\Users\Admin\anaconda3\Lib\site-packages\sklearn\utils\__init__.py)
+

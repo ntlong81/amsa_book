@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Giáo trình Thực hành Phân tích Dữ liệu và Mô hình hóa với Python &#8212; Giáo trình Phân tích Thống kê Đa biến Ứng dụng trong Kinh tế, Tài chính và Kinh doanh</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="chapters/00_Loi_Noi_Dau.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Giáo trình Phân tích Thống kê Đa biến Ứng dụng trong Kinh tế, Tài chính và Kinh doanh</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="chapters/00_Loi_Noi_Dau.html">
+                    LỜI NÓI ĐẦU
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapters/01_Chuong_1.html">CHƯƠNG 1: CƠ SỞ TOÁN HỌC VÀ TỔNG QUAN VỀ PHÂN TÍCH ĐA BIẾN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/02_Chuong_2.html">CHƯƠNG 2: CHUẨN BỊ VÀ LÀM SẠCH DỮ LIỆU (DATA PREPROCESSING &amp; FEATURE ENGINEERING)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/03_Chuong_3.html">CHƯƠNG 3: TƯ DUY MÔ HÌNH HÓA ĐA BIẾN (MULTIVARIATE MODELING MINDSET)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/04_Chuong_4.html">CHƯƠNG 4: ĐƯỜNG ỐNG BIẾN TIỀM ẨN (PHẦN 1): PHÂN TÍCH THÀNH PHẦN CHÍNH (PCA) &amp; NHÂN TỐ KHÁM PHÁ (EFA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/05_Chuong_5.html">CHƯƠNG 5: PHÂN TÍCH CỤM (CLUSTER ANALYSIS) VÀ KHÁM PHÁ CẤU TRÚC NHÓM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/06_Chuong_6.html">CHƯƠNG 6: PHÂN TÍCH TƯƠNG QUAN, ANOVA VÀ HỒI QUY TUYẾN TÍNH BỘI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/07_Chuong_7.html">CHƯƠNG 7: PHÂN TÍCH BIỆT SỐ VÀ HỒI QUY LOGISTIC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/08_Chuong_8.html">CHƯƠNG 8: ĐƯỜNG ỐNG BIẾN TIỀM ẨN (PHẦN 2): CFA &amp; MÔ HÌNH PHƯƠNG TRÌNH CẤU TRÚC (SEM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/09_Chuong_9.html">CHƯƠNG 9: CHUỖI THỜI GIAN ĐA BIẾN (VAR/VECM) TRONG KINH TẾ TÀI CHÍNH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/10_Chuong_10.html">CHƯƠNG 10: TÍCH HỢP MACHINE LEARNING VÀ XAI (EXPLAINABLE AI) VÀO PHÂN TÍCH ĐA BIẾN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/11_Tong_Ket.html">TỔNG KẾT GIÁO TRÌNH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/99_Tai_Lieu_Tham_Khao.html">TÀI LIỆU THAM KHẢO (BIBLIOGRAPHY)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Giáo trình Thực hành Phân tích Dữ liệu và Mô hình hóa với Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#noi-dung-cac-chuong">📖 Nội dung các chương</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cau-truc-thu-muc-du-an">🗂 Cấu trúc thư mục dự án</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huong-dan-cai-dat-va-su-dung">🚀 Hướng dẫn cài đặt và sử dụng</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-phien-ban-sach-web-html-book">📚 Build phiên bản Sách Web (HTML Book)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luu-y-ve-phien-ban-versioning">💡 Lưu ý về phiên bản (Versioning)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="giao-trinh-thuc-hanh-phan-tich-du-lieu-va-mo-hinh-hoa-voi-python">
+<h1>Giáo trình Thực hành Phân tích Dữ liệu và Mô hình hóa với Python<a class="headerlink" href="#giao-trinh-thuc-hanh-phan-tich-du-lieu-va-mo-hinh-hoa-voi-python" title="Permalink to this heading">#</a></h1>
+<p>Chào mừng bạn đến với kho lưu trữ mã nguồn và dữ liệu thực hành của dự án <strong>Sách/Giáo trình Phân tích Dữ liệu và Mô hình hóa với Python</strong>. Kho lưu trữ này cung cấp toàn bộ các file Jupyter Notebook, dữ liệu Case Study và môi trường để bạn có thể học tập, chạy thử nghiệm và tự tay xây dựng các báo cáo phân tích từ cơ bản đến nâng cao.</p>
+<section id="noi-dung-cac-chuong">
+<h2>📖 Nội dung các chương<a class="headerlink" href="#noi-dung-cac-chuong" title="Permalink to this heading">#</a></h2>
+<p>Cuốn sách được thiết kế theo lộ trình từ tiền xử lý dữ liệu cho đến các mô hình thống kê và máy học chuyên sâu. Toàn bộ mã nguồn nằm trong thư mục <code class="docutils literal notranslate"><span class="pre">chapters/</span></code>:</p>
+<ul class="simple">
+<li><p><strong>Chương 0 - 3:</strong> Khởi động, Thu thập, Tiền xử lý và Làm sạch dữ liệu.</p></li>
+<li><p><strong>Chương 4:</strong> Khám phá cấu trúc dữ liệu với <strong>EFA</strong> (Exploratory Factor Analysis) và <strong>PCA</strong> (Principal Component Analysis).</p></li>
+<li><p><strong>Chương 5 - 7:</strong> Các thuật toán Machine Learning (Phân loại, Hồi quy) và Kỹ thuật Resampling (xử lý dữ liệu mất cân bằng).</p></li>
+<li><p><strong>Chương 8:</strong> Mô hình cấu trúc tuyến tính <strong>SEM</strong> (Structural Equation Modeling) và <strong>CFA</strong> (Confirmatory Factor Analysis).</p></li>
+<li><p><strong>Chương 9 - 10:</strong> Phân tích Chuỗi thời gian (Time Series), Mô hình <strong>VAR</strong> (Vector Autoregression), <strong>VECM</strong>, và Dự báo (Forecasting).</p></li>
+<li><p><strong>Chương 11:</strong> Tổng kết và định hướng phát triển.</p></li>
+<li><p><strong>Phụ lục:</strong> Tài liệu tham khảo học thuật (<code class="docutils literal notranslate"><span class="pre">references.bib</span></code>).</p></li>
+</ul>
+</section>
+<section id="cau-truc-thu-muc-du-an">
+<h2>🗂 Cấu trúc thư mục dự án<a class="headerlink" href="#cau-truc-thu-muc-du-an" title="Permalink to this heading">#</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>├── case_studies/           # Chứa toàn bộ các file dữ liệu (.csv, .xlsx) cho bài tập thực hành.
+├── chapters/               # Mã nguồn chính (.ipynb). Mỗi chương là một notebook độc lập.
+│   └── images/             # Nơi lưu trữ các biểu đồ, hình ảnh EDA được xuất ra trong quá trình chạy code.
+├── my_book/                # Thư mục cấu hình Jupyter Book (chứa _config.yml, _toc.yml).
+├── requirements.txt        # Danh sách các thư viện Python và phiên bản tương thích cần thiết.
+├── README.md               # Tài liệu mô tả dự án này.
+└── .gitignore              # Định nghĩa các tệp rác không đẩy lên GitHub.
+</pre></div>
+</div>
+</section>
+<section id="huong-dan-cai-dat-va-su-dung">
+<h2>🚀 Hướng dẫn cài đặt và sử dụng<a class="headerlink" href="#huong-dan-cai-dat-va-su-dung" title="Permalink to this heading">#</a></h2>
+<p>Dự án này sử dụng Python. Để đảm bảo tất cả các file code hoạt động trơn tru (đặc biệt là các thư viện đặc thù như <code class="docutils literal notranslate"><span class="pre">semopy</span></code> hay <code class="docutils literal notranslate"><span class="pre">factor_analyzer</span></code>), vui lòng thiết lập môi trường y hệt như cấu hình chuẩn.</p>
+<p><strong>Bước 1: Clone dự án về máy</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-username/amsa_book.git
+<span class="nb">cd</span><span class="w"> </span>amsa_book
+</pre></div>
+</div>
+<p><strong>Bước 2: Cài đặt thư viện</strong>
+Khuyến nghị bạn tạo một môi trường ảo (virtual environment) trước khi cài đặt.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p><strong>Bước 3: Chạy Jupyter Notebook</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+<p>Sau đó, bạn điều hướng vào thư mục <code class="docutils literal notranslate"><span class="pre">chapters/</span></code> và mở lần lượt các file <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> để chạy thực hành.</p>
+</section>
+<section id="build-phien-ban-sach-web-html-book">
+<h2>📚 Build phiên bản Sách Web (HTML Book)<a class="headerlink" href="#build-phien-ban-sach-web-html-book" title="Permalink to this heading">#</a></h2>
+<p>Kho lưu trữ này được tích hợp sẵn cấu hình <strong>Jupyter Book</strong> để chuyển đổi toàn bộ mã nguồn thành một website học liệu trực quan. Để tự build sách HTML trên máy của bạn:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Di chuyển vào thư mục dự án</span>
+<span class="nb">cd</span><span class="w"> </span>amsa_book
+
+<span class="c1"># Build thư mục my_book/</span>
+jupyter-book<span class="w"> </span>build<span class="w"> </span>my_book/
+</pre></div>
+</div>
+<p>Sau khi quá trình build kết thúc thành công, bạn chỉ cần mở file <code class="docutils literal notranslate"><span class="pre">my_book/_build/html/index.html</span></code> trên trình duyệt web để bắt đầu đọc sách!</p>
+</section>
+<section id="luu-y-ve-phien-ban-versioning">
+<h2>💡 Lưu ý về phiên bản (Versioning)<a class="headerlink" href="#luu-y-ve-phien-ban-versioning" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Để tránh xung đột API nội bộ (cụ thể ở hàm <code class="docutils literal notranslate"><span class="pre">check_array</span></code>), dự án này đã cố định phiên bản <code class="docutils literal notranslate"><span class="pre">scikit-learn==1.5.2</span></code> để tương thích hoàn toàn với thư viện phân tích nhân tố <code class="docutils literal notranslate"><span class="pre">factor_analyzer</span></code>. Xin lưu ý nếu bạn có ý định nâng cấp thư viện này lên các bản <code class="docutils literal notranslate"><span class="pre">1.6.x</span></code> trở lên.</p></li>
+</ul>
+<hr class="docutils" />
+<p><em>Dự án này được xây dựng với mục tiêu giáo dục và lan tỏa tri thức về khoa học dữ liệu.</em></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#noi-dung-cac-chuong">📖 Nội dung các chương</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cau-truc-thu-muc-du-an">🗂 Cấu trúc thư mục dự án</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huong-dan-cai-dat-va-su-dung">🚀 Hướng dẫn cài đặt và sử dụng</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-phien-ban-sach-web-html-book">📚 Build phiên bản Sách Web (HTML Book)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luu-y-ve-phien-ban-versioning">💡 Lưu ý về phiên bản (Versioning)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By TS. Nguyễn Mạnh Thế, TS. Vũ Thị Bích Ngọc, TS. Nguyễn Tuấn Long
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

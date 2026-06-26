@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# =====================================================================
+# CASE STUDY: HỆ THỐNG CẢNH BÁO SỚM RỦI RO TÍN DỤNG ĐA CHIỀU
+# Dataset: credit_risk_simulated.csv
+# =====================================================================
+import os
+
+DATASET_PATH = r'e:\Code\amsa_book\case_studies\00_main_bank_churn\credit_risk_simulated.csv'
+
+# Tạo dữ liệu mô phỏng nếu file chưa tồn tại
+if not os.path.exists(DATASET_PATH):
+    np.random.seed(2024)
+    n_good, n_bad = 400, 100
+    
+    # Khách hàng tốt: thu nhập ổn định, nợ hợp lý, lịch sử tốt
+    mu_good = [60, 180, 10, 720, 35, 3]
+    Sigma_good = np.diag([400, 1600, 9, 2500, 25, 1]) 
+    Sigma_good[0,1] = Sigma_good[1,0] = -300  # thu nhập ~ nợ: tương quan âm
+    Sigma_good[0,3] = Sigma_good[3,0] = 500   # thu nhập ~ điểm: tương quan dương
+    good_data = np.random.multivariate_normal(mu_good, Sigma_good, n_good)
+    
+    # Khách hàng xấu: đa dạng hơn, đuôi phân phối nặng hơn
+    mu_bad = [30, 450, 4, 450, 58, 7]
+    Sigma_bad = np.diag([900, 4900, 16, 4000, 100, 4])
+    Sigma_bad[0,1] = Sigma_bad[1,0] = 500   # thu nhập ~ nợ: tương quan dương (nguy hiểm!)
+    bad_data = np.random.multivariate_normal(mu_bad, Sigma_bad, n_bad)
+    
+    feature_cols = ['Thu_nhap', 'Du_no', 'Nam_tin_dung', 'Diem_tin_dung', 'DTI_ratio', 'So_lan_tre_han']
+    
+    df_case = pd.DataFrame(
+        np.vstack([good_data, bad_data]),
+        columns=feature_cols
+    )
+    df_case['Vo_no'] = [0]*n_good + [1]*n_bad
+    df_case['Thu_nhap'] = df_case['Thu_nhap'].clip(lower=5)
+    df_case['Du_no'] = df_case['Du_no'].clip(lower=0)
+    df_case['Nam_tin_dung'] = df_case['Nam_tin_dung'].clip(lower=0)
+    df_case['Diem_tin_dung'] = df_case['Diem_tin_dung'].clip(150, 850)
+    df_case['DTI_ratio'] = df_case['DTI_ratio'].clip(0, 100)
+    df_case['So_lan_tre_han'] = df_case['So_lan_tre_han'].clip(lower=0).round()
+    
+    os.makedirs(os.path.dirname(DATASET_PATH), exist_ok=True)
+    df_case.to_csv(DATASET_PATH, index=False, encoding='utf-8')
+    print(f"Đã tạo và lưu dataset: {DATASET_PATH}")
+
+# Đọc dữ liệu
+df_case = pd.read_csv(DATASET_PATH)
+feature_cols = ['Thu_nhap', 'Du_no', 'Nam_tin_dung', 'Diem_tin_dung', 'DTI_ratio', 'So_lan_tre_han']
+print(f"\nDataset: {df_case.shape[0]} quan sát × {df_case.shape[1]} biến")
+print(f"Tỷ lệ vỡ nợ: {df_case['Vo_no'].mean()*100:.1f}%")
+print(f"\nThống kê mô tả:\n{df_case[feature_cols].describe().round(2).to_string()}")
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [1;32mIn[6], line 41[0m
+[0;32m     38[0m df_case[[38;5;124m'[39m[38;5;124mDTI_ratio[39m[38;5;124m'[39m] [38;5;241m=[39m df_case[[38;5;124m'[39m[38;5;124mDTI_ratio[39m[38;5;124m'[39m][38;5;241m.[39mclip([38;5;241m0[39m, [38;5;241m100[39m)
+[0;32m     39[0m df_case[[38;5;124m'[39m[38;5;124mSo_lan_tre_han[39m[38;5;124m'[39m] [38;5;241m=[39m df_case[[38;5;124m'[39m[38;5;124mSo_lan_tre_han[39m[38;5;124m'[39m][38;5;241m.[39mclip(lower[38;5;241m=[39m[38;5;241m0[39m)[38;5;241m.[39mround()
+[1;32m---> 41[0m os[38;5;241m.[39mmakedirs(os[38;5;241m.[39mpath[38;5;241m.[39mdirname(DATASET_PATH), exist_ok[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[0;32m     42[0m df_case[38;5;241m.[39mto_csv(DATASET_PATH, index[38;5;241m=[39m[38;5;28;01mFalse[39;00m, encoding[38;5;241m=[39m[38;5;124m'[39m[38;5;124mutf-8[39m[38;5;124m'[39m)
+[0;32m     43[0m [38;5;28mprint[39m([38;5;124mf[39m[38;5;124m"[39m[38;5;124mĐã tạo và lưu dataset: [39m[38;5;132;01m{[39;00mDATASET_PATH[38;5;132;01m}[39;00m[38;5;124m"[39m)
+
+File [1;32m<frozen os>:215[0m, in [0;36mmakedirs[1;34m(name, mode, exist_ok)[0m
+
+File [1;32m<frozen os>:215[0m, in [0;36mmakedirs[1;34m(name, mode, exist_ok)[0m
+
+    [1;31m[... skipping similar frames: makedirs at line 215 (1 times)][0m
+
+File [1;32m<frozen os>:215[0m, in [0;36mmakedirs[1;34m(name, mode, exist_ok)[0m
+
+File [1;32m<frozen os>:225[0m, in [0;36mmakedirs[1;34m(name, mode, exist_ok)[0m
+
+[1;31mFileNotFoundError[0m: [WinError 3] The system cannot find the path specified: 'e:\\'
+

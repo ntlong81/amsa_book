@@ -1,0 +1,90 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\Admin\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LassoCV, RidgeCV
+
+# Tải hai bộ dữ liệu phục vụ thực hành
+roi_path = r"e:\Code\amsa_book\case_studies\01_marketing_campaign\marketing_roi.csv"
+sales_path = r"e:\Code\amsa_book\case_studies\01_marketing_campaign\sales_forecasting.csv"
+
+df_roi = pd.read_csv(roi_path)
+df_sales = pd.read_csv(sales_path)
+
+print("Kích thước dữ liệu chiến dịch tiếp thị:", df_roi.shape)
+print("Kích thước dữ liệu dự báo doanh số cửa hàng:", df_sales.shape)
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mImportError[0m                               Traceback (most recent call last)
+Cell [1;32mIn[1], line 6[0m
+[0;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[0;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mseaborn[39;00m [38;5;28;01mas[39;00m [38;5;21;01msns[39;00m
+[1;32m----> 6[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m [38;5;28;01mas[39;00m [38;5;21;01msm[39;00m
+[0;32m      7[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mformula[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m [38;5;28;01mas[39;00m [38;5;21;01msmf[39;00m
+[0;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpreprocessing[39;00m [38;5;28;01mimport[39;00m StandardScaler
+
+File [1;32m~\anaconda3\Lib\site-packages\statsmodels\api.py:78[0m
+[0;32m      1[0m [38;5;66;03m# -*- coding: utf-8 -*-[39;00m
+[0;32m      3[0m __all__ [38;5;241m=[39m [
+[0;32m      4[0m     [38;5;124m"[39m[38;5;124mBayesGaussMI[39m[38;5;124m"[39m,
+[0;32m      5[0m     [38;5;124m"[39m[38;5;124mBinomialBayesMixedGLM[39m[38;5;124m"[39m,
+[1;32m   (...)[0m
+[0;32m     74[0m     [38;5;124m"[39m[38;5;124m__version_info__[39m[38;5;124m"[39m
+[0;32m     75[0m ]
+[1;32m---> 78[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m datasets, distributions, iolib, regression, robust, tools
+[0;32m     79[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m__init__[39;00m [38;5;28;01mimport[39;00m test
+[0;32m     80[0m [38;5;28;01mfrom[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01m_version[39;00m [38;5;28;01mimport[39;00m (
+[0;32m     81[0m     version [38;5;28;01mas[39;00m __version__, version_tuple [38;5;28;01mas[39;00m __version_info__
+[0;32m     82[0m )
+
+File [1;32m~\anaconda3\Lib\site-packages\statsmodels\distributions\__init__.py:7[0m
+[0;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mempirical_distribution[39;00m [38;5;28;01mimport[39;00m (
+[0;32m      3[0m     ECDF, ECDFDiscrete, monotone_fn_inverter, StepFunction
+[0;32m      4[0m     )
+[0;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01medgeworth[39;00m [38;5;28;01mimport[39;00m ExpandedNormal
+[1;32m----> 7[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mdiscrete[39;00m [38;5;28;01mimport[39;00m (
+[0;32m      8[0m     genpoisson_p, zipoisson, zigenpoisson, zinegbin,
+[0;32m      9[0m     )
+[0;32m     11[0m __all__ [38;5;241m=[39m [
+[0;32m     12[0m     [38;5;124m'[39m[38;5;124mECDF[39m[38;5;124m'[39m,
+[0;32m     13[0m     [38;5;124m'[39m[38;5;124mECDFDiscrete[39m[38;5;124m'[39m,
+[1;32m   (...)[0m
+[0;32m     21[0m     [38;5;124m'[39m[38;5;124mzipoisson[39m[38;5;124m'[39m
+[0;32m     22[0m     ]
+[0;32m     24[0m test [38;5;241m=[39m PytestTester()
+
+File [1;32m~\anaconda3\Lib\site-packages\statsmodels\distributions\discrete.py:5[0m
+[0;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mstats[39;00m [38;5;28;01mimport[39;00m rv_discrete, poisson, nbinom
+[0;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mspecial[39;00m [38;5;28;01mimport[39;00m gammaln
+[1;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01m_lib[39;00m[38;5;21;01m.[39;00m[38;5;21;01m_util[39;00m [38;5;28;01mimport[39;00m _lazywhere
+[0;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmodel[39;00m [38;5;28;01mimport[39;00m GenericLikelihoodModel
+[0;32m     10[0m [38;5;28;01mclass[39;00m [38;5;21;01mgenpoisson_p_gen[39;00m(rv_discrete):
+
+[1;31mImportError[0m: cannot import name '_lazywhere' from 'scipy._lib._util' (C:\Users\Admin\anaconda3\Lib\site-packages\scipy\_lib\_util.py)
+
