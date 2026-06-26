@@ -1,0 +1,26 @@
+# Môi trường và Lõi
+jupyter
+notebook
+jupyter-book
+
+# Xử lý Dữ liệu
+pandas
+numpy
+
+# Trực quan hóa
+matplotlib
+seaborn
+
+# Thống kê và Máy học Truyền thống
+scipy
+statsmodels
+scikit-learn==1.5.2
+
+# Phân tích Nhân tố (EFA, PCA)
+factor-analyzer
+
+# Mô hình Phương trình Cấu trúc (SEM, CFA)
+semopy
+
+# Xử lý mất cân bằng dữ liệu
+imbalanced-learn
