@@ -649,6 +649,7 @@ document.write(`
 <span class="c1"># Tải bộ dữ liệu chấm điểm tín dụng mất cân bằng</span>
 <span class="n">data_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;..\case_studies\00_main_bank_churn\credit_scoring_imbalanced.csv&quot;</span>
 <span class="n">df_credit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
+<span class="n">df_credit</span><span class="p">[</span><span class="s1">&#39;CustomerID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_credit</span><span class="p">[</span><span class="s1">&#39;CustomerID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kích thước dữ liệu tín dụng:&quot;</span><span class="p">,</span> <span class="n">df_credit</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Tỷ lệ phân bố của biến mục tiêu vỡ nợ:&quot;</span><span class="p">)</span>
@@ -710,15 +711,15 @@ RangeIndex: 1000 entries, 0 to 999
 Data columns (total 7 columns):
  #   Column            Non-Null Count  Dtype  
 ---  ------            --------------  -----  
- 0   CustomerID        1000 non-null   int64  
+ 0   CustomerID        1000 non-null   object 
  1   Age               1000 non-null   int64  
  2   Income            1000 non-null   float64
  3   CreditScore       1000 non-null   int64  
  4   DebtRatio         1000 non-null   float64
  5   NumOfDependents   1000 non-null   int64  
  6   SeriousDlqin2yrs  1000 non-null   int64  
-dtypes: float64(2), int64(5)
-memory usage: 54.8 KB
+dtypes: float64(2), int64(4), object(1)
+memory usage: 54.8+ KB
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -739,7 +740,6 @@ memory usage: 54.8 KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>CustomerID</th>
       <th>Age</th>
       <th>Income</th>
       <th>CreditScore</th>
@@ -757,11 +757,9 @@ memory usage: 54.8 KB
       <td>1000.000000</td>
       <td>1000.000000</td>
       <td>1000.000000</td>
-      <td>1000.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>500.500000</td>
       <td>44.387000</td>
       <td>54.930600</td>
       <td>625.283000</td>
@@ -771,7 +769,6 @@ memory usage: 54.8 KB
     </tr>
     <tr>
       <th>std</th>
-      <td>288.819436</td>
       <td>11.745688</td>
       <td>15.183824</td>
       <td>78.107552</td>
@@ -781,7 +778,6 @@ memory usage: 54.8 KB
     </tr>
     <tr>
       <th>min</th>
-      <td>1.000000</td>
       <td>18.000000</td>
       <td>12.000000</td>
       <td>366.000000</td>
@@ -791,7 +787,6 @@ memory usage: 54.8 KB
     </tr>
     <tr>
       <th>25%</th>
-      <td>250.750000</td>
       <td>36.000000</td>
       <td>44.680000</td>
       <td>575.000000</td>
@@ -801,7 +796,6 @@ memory usage: 54.8 KB
     </tr>
     <tr>
       <th>50%</th>
-      <td>500.500000</td>
       <td>45.000000</td>
       <td>54.460000</td>
       <td>626.000000</td>
@@ -811,7 +805,6 @@ memory usage: 54.8 KB
     </tr>
     <tr>
       <th>75%</th>
-      <td>750.250000</td>
       <td>52.000000</td>
       <td>65.285000</td>
       <td>679.000000</td>
@@ -821,7 +814,6 @@ memory usage: 54.8 KB
     </tr>
     <tr>
       <th>max</th>
-      <td>1000.000000</td>
       <td>78.000000</td>
       <td>105.580000</td>
       <td>850.000000</td>
@@ -831,8 +823,8 @@ memory usage: 54.8 KB
     </tr>
   </tbody>
 </table>
-</div></div><img alt="../_images/09ef99e65f54c32cc2b6ab0ab18dd675725891a2272897e81926e07094855f26.png" src="../_images/09ef99e65f54c32cc2b6ab0ab18dd675725891a2272897e81926e07094855f26.png" />
-<img alt="../_images/216fae6ec2784e65ee2f06c7c6fe1bcdf315b74364ec6a9d7d899d6b032cd64a.png" src="../_images/216fae6ec2784e65ee2f06c7c6fe1bcdf315b74364ec6a9d7d899d6b032cd64a.png" />
+</div></div><img alt="../_images/02abf8a7339beb0d9f560ca58085b8e3afcfb388b1a7d89a27fb915b09b416c7.png" src="../_images/02abf8a7339beb0d9f560ca58085b8e3afcfb388b1a7d89a27fb915b09b416c7.png" />
+<img alt="../_images/ce5751f6a2fe3f74735e61f4cdb487765c387545e4145efdabf8d768a196b992.png" src="../_images/ce5751f6a2fe3f74735e61f4cdb487765c387545e4145efdabf8d768a196b992.png" />
 </div>
 </div>
 <p>Kết quả in ra xác nhận bộ dữ liệu có một ngàn dòng quan sát và bảy thuộc tính đặc trưng. Biến mục tiêu SeriousDlqin2yrs nhận giá trị một cho khách hàng vỡ nợ và không cho khách hàng tốt. Tỷ lệ khách hàng vỡ nợ chiếm đúng mười sáu phẩy bảy phần trăm, phản ánh sự mất cân bằng nhóm dữ liệu rõ rệt. Bây giờ, chúng ta tiến hành bước tiếp theo là phân tách dữ liệu thành ma trận biến độc lập X và vector biến phụ thuộc y, loại bỏ cột định danh CustomerID không mang thông tin phân lớp. Sau đó, chúng ta thực hiện phân chia mẫu dữ liệu thành tập huấn luyện (training set) chiếm bảy mươi phần trăm và tập kiểm thử (testing set) chiếm ba mươi phần trăm. Để bảo toàn chính xác tỷ lệ mất cân bằng của biến mục tiêu trên cả hai tập dữ liệu, chúng ta thiết lập tham số stratify theo biến y. Tiếp theo, chúng ta áp dụng StandardScaler để chuẩn hóa các biến độc lập liên tục về thang đo có trung bình bằng không và phương sai bằng một. Việc chuẩn hóa này cực kỳ quan trọng đối với thuật toán LDA để đảm bảo giả định đồng nhất hiệp phương sai không bị méo mó bởi sự chênh lệch đơn vị đo của các biến như thu nhập và điểm tín dụng.</p>
@@ -1021,7 +1013,7 @@ weighted avg       0.79      0.69      0.73       300
 <section id="case-study-ung-dung">
 <h2>Case Study Ứng dụng<a class="headerlink" href="#case-study-ung-dung" title="Permalink to this heading">#</a></h2>
 <p>Trong phần Case Study Ứng dụng này, chúng ta đóng vai trò là nhóm chuyên gia phân tích rủi ro tín dụng tại một ngân hàng thương mại bán lẻ lớn. Nhiệm vụ của nhóm là thiết kế, đánh giá và đề xuất một mô hình xếp hạng tín dụng tự động để triển khai vào hệ thống duyệt vay trực tuyến của ngân hàng. Dữ liệu đầu vào cho hệ thống là hồ sơ tài chính của khách hàng bao gồm tuổi, thu nhập, điểm số tín dụng và tỷ lệ nợ. Mục tiêu cốt lõi của ngân hàng là giảm thiểu tối đa tỷ lệ nợ xấu phát sinh, đồng nghĩa với việc tối thiểu hóa các lỗi Âm tính giả (phê duyệt cho khách hàng vỡ nợ), trong khi vẫn duy trì một năng lực phê duyệt ổn định để không làm mất lòng các khách hàng tốt.</p>
-<p>Để thực hiện nhiệm vụ này, nhóm nghiên cứu tiến hành triển khai một đường ống phân tích dữ liệu đồng bộ trên Python. Đầu tiên, dữ liệu lịch sử được tải và làm sạch, các biến đặc trưng được đưa qua bộ chuẩn hóa StandardScaler để đưa về cùng một thang đo chuẩn tắc, loại bỏ ảnh hưởng của đơn vị đo lường lên các mô hình phân biệt số. Sau đó, nhóm xây dựng và so sánh bốn phương pháp tiếp cận mô hình hóa bao gồm Discriminant Analysis LDA tiêu chuẩn, Hồi quy Logistic tiêu chuẩn, Hồi quy Logistic điều chỉnh trọng số lớp phạt, và Hồi quy Logistic kết hợp tái lấy mẫu cân bằng bằng thuật toán SMOTE.</p>
+<p>Để thực hiện nhiệm vụ này, nhóm nghiên cứu tiến hành triển khai một đường ống phân tích dữ liệu đồng bộ trên Python. Đầu tiên, dữ liệu lịch sử được tải, làm sạch và phân tách nghiêm ngặt thành tập huấn luyện và tập kiểm thử. Nhằm tuân thủ nguyên tắc chống rò rỉ dữ liệu (Data Leakage), bộ chuẩn hóa StandardScaler chỉ được học (fit) trên tập huấn luyện, sau đó áp dụng (transform) để đưa các biến đặc trưng về cùng một thang đo chuẩn tắc, loại bỏ ảnh hưởng của đơn vị đo lường. Tiếp theo, nhóm xây dựng và so sánh bốn phương pháp tiếp cận mô hình hóa bao gồm Discriminant Analysis LDA tiêu chuẩn, Hồi quy Logistic tiêu chuẩn, Hồi quy Logistic điều chỉnh trọng số lớp phạt, và Hồi quy Logistic kết hợp tái lấy mẫu cân bằng bằng thuật toán SMOTE.</p>
 <p>Kết quả kiểm thử thực tế trên ba trăm khách hàng độc lập cho thấy mô hình Hồi quy Logistic tiêu chuẩn và LDA tiêu chuẩn mặc dù đạt tổng điểm chính xác rất cao nhưng bỏ sót đến hơn tám mươi phần trăm khách hàng vỡ nợ, một mức độ rủi ro hoàn toàn không thể chấp nhận được đối với ban quản trị ngân hàng. Ngược lại, việc áp dụng Hồi quy Logistic điều chỉnh trọng số lớp và SMOTE đã giúp nâng độ nhạy lên trên bảy mươi phần trăm. Mô hình SMOTE Logistic Regression đạt chỉ số AUC cao nhất là không phẩy tám mươi tư và chỉ số F1-Score cân bằng tốt nhất.</p>
 <p>Dựa trên các phân tích định lượng này, nhóm phân tích đưa ra khuyến nghị lựa chọn mô hình SMOTE Logistic Regression để đưa vào vận hành thực tế. Việc lựa chọn này dựa trên bài toán tối ưu hóa chi phí tài chính của ngân hàng. Mặc dù mô hình SMOTE từ chối nhầm một số lượng khách hàng tốt cao hơn nhẹ so với mô hình tiêu chuẩn, việc ngăn chặn thành công hơn bảy mươi lăm phần trăm số lượng khoản vay có nguy cơ vỡ nợ giúp ngân hàng tiết kiệm hàng chục tỷ đồng tổn thất nợ xấu trực tiếp, vượt xa chi phí cơ hội bị mất từ việc từ chối các khách hàng bị cảnh báo nhầm. Đây là một minh chứng thực tế rõ nét cho việc kết hợp toán học thống kê đa biến với tư duy ra quyết định kinh doanh thực tiễn.</p>
 </section>

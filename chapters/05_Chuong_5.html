@@ -542,6 +542,7 @@ document.write(`
 <span class="c1"># Định nghĩa đường dẫn và tải bộ dữ liệu phân đoạn khách hàng</span>
 <span class="n">csv_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;..\case_studies\03_customer_segmentation\customer_segmentation.csv&quot;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;CustomerID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;CustomerID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 
 <span class="c1"># Hiển thị thông tin cơ bản về cấu trúc và kích thước của bộ dữ liệu</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kích thước của bảng dữ liệu phân đoạn khách hàng:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -553,12 +554,12 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kích thước của bảng dữ liệu phân đoạn khách hàng: (1000, 8)
 Danh sách các cột đặc trưng trong bộ dữ liệu: [&#39;CustomerID&#39;, &#39;Age&#39;, &#39;Income&#39;, &#39;CreditScore&#39;, &#39;Factor_Service&#39;, &#39;Factor_Product&#39;, &#39;Factor_Price&#39;, &#39;TrueSegment&#39;]
-   CustomerID  Age     Income  CreditScore  Factor_Service  Factor_Product  \
-0           1   21  47.551217          633        0.903155        0.583824   
-1           2   63  25.433599          631        0.687542        0.196151   
-2           3   22  27.883035          588        0.779316        1.211898   
-3           4   56  36.878490          675        0.741661        0.319488   
-4           5   59  34.972361          690        0.877870        0.120464   
+  CustomerID  Age     Income  CreditScore  Factor_Service  Factor_Product  \
+0          1   21  47.551217          633        0.903155        0.583824   
+1          2   63  25.433599          631        0.687542        0.196151   
+2          3   22  27.883035          588        0.779316        1.211898   
+3          4   56  36.878490          675        0.741661        0.319488   
+4          5   59  34.972361          690        0.877870        0.120464   
 
    Factor_Price          TrueSegment  
 0      0.694966  Gioi_tre_Tieu_hoang  
@@ -612,7 +613,7 @@ RangeIndex: 1000 entries, 0 to 999
 Data columns (total 8 columns):
  #   Column          Non-Null Count  Dtype  
 ---  ------          --------------  -----  
- 0   CustomerID      1000 non-null   int64  
+ 0   CustomerID      1000 non-null   object 
  1   Age             1000 non-null   int64  
  2   Income          1000 non-null   float64
  3   CreditScore     1000 non-null   int64  
@@ -620,7 +621,7 @@ Data columns (total 8 columns):
  5   Factor_Product  1000 non-null   float64
  6   Factor_Price    1000 non-null   float64
  7   TrueSegment     1000 non-null   object 
-dtypes: float64(4), int64(3), object(1)
+dtypes: float64(4), int64(2), object(2)
 memory usage: 62.6+ KB
 </pre></div>
 </div>
@@ -642,7 +643,6 @@ memory usage: 62.6+ KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>CustomerID</th>
       <th>Age</th>
       <th>Income</th>
       <th>CreditScore</th>
@@ -656,7 +656,6 @@ memory usage: 62.6+ KB
       <th>count</th>
       <td>1000.000000</td>
       <td>1000.000000</td>
-      <td>1000.000000</td>
       <td>1000.00000</td>
       <td>1000.000000</td>
       <td>1000.000000</td>
@@ -664,7 +663,6 @@ memory usage: 62.6+ KB
     </tr>
     <tr>
       <th>mean</th>
-      <td>500.500000</td>
       <td>39.729000</td>
       <td>57.225200</td>
       <td>656.84300</td>
@@ -674,7 +672,6 @@ memory usage: 62.6+ KB
     </tr>
     <tr>
       <th>std</th>
-      <td>288.819436</td>
       <td>14.818811</td>
       <td>53.173329</td>
       <td>83.06359</td>
@@ -684,7 +681,6 @@ memory usage: 62.6+ KB
     </tr>
     <tr>
       <th>min</th>
-      <td>1.000000</td>
       <td>18.000000</td>
       <td>12.397280</td>
       <td>415.00000</td>
@@ -694,7 +690,6 @@ memory usage: 62.6+ KB
     </tr>
     <tr>
       <th>25%</th>
-      <td>250.750000</td>
       <td>26.000000</td>
       <td>30.134766</td>
       <td>597.00000</td>
@@ -704,7 +699,6 @@ memory usage: 62.6+ KB
     </tr>
     <tr>
       <th>50%</th>
-      <td>500.500000</td>
       <td>37.000000</td>
       <td>36.677387</td>
       <td>653.00000</td>
@@ -714,7 +708,6 @@ memory usage: 62.6+ KB
     </tr>
     <tr>
       <th>75%</th>
-      <td>750.250000</td>
       <td>53.000000</td>
       <td>47.885157</td>
       <td>718.25000</td>
@@ -724,7 +717,6 @@ memory usage: 62.6+ KB
     </tr>
     <tr>
       <th>max</th>
-      <td>1000.000000</td>
       <td>73.000000</td>
       <td>250.608265</td>
       <td>850.00000</td>
@@ -734,8 +726,8 @@ memory usage: 62.6+ KB
     </tr>
   </tbody>
 </table>
-</div></div><img alt="../_images/9c81540b7b77297275571fc9e9dad192d653552f433775c428eeabc58eff59a9.png" src="../_images/9c81540b7b77297275571fc9e9dad192d653552f433775c428eeabc58eff59a9.png" />
-<img alt="../_images/216fae6ec2784e65ee2f06c7c6fe1bcdf315b74364ec6a9d7d899d6b032cd64a.png" src="../_images/216fae6ec2784e65ee2f06c7c6fe1bcdf315b74364ec6a9d7d899d6b032cd64a.png" />
+</div></div><img alt="../_images/aa66785106aea86eab726d9051b3428e66384b88b437d3b559aece98d069a50a.png" src="../_images/aa66785106aea86eab726d9051b3428e66384b88b437d3b559aece98d069a50a.png" />
+<img alt="../_images/48f94080fc739378a6d26396bf5f440caedc7cb65dcc0df74c66776002cbcee0.png" src="../_images/48f94080fc739378a6d26396bf5f440caedc7cb65dcc0df74c66776002cbcee0.png" />
 </div>
 </div>
 <p>Bảng dữ liệu được tải thành công chứa đúng một ngàn quan sát và tám thuộc tính. Các thuộc tính này bao gồm mã định danh khách hàng CustomerID, các thông tin nhân khẩu học và tài chính thô như Age, Income, CreditScore, ba đặc trưng tiềm ẩn từ phân tích nhân tố là Factor_Service, Factor_Product, Factor_Price, và cuối cùng là cột nhãn phân đoạn thực tế TrueSegment được sử dụng để đối chiếu hiệu năng. Trước khi đưa dữ liệu vào các thuật toán phân cụm, một bước chuẩn bị bắt buộc là chuẩn hóa dữ liệu. Do các biến số ban đầu có đơn vị đo lường và tầm vóc số học rất khác nhau-chẳng hạn như độ tuổi dao động trong khoảng từ mười tám đến tám mươi tuổi, thu nhập thường niên tính bằng triệu đồng có thể lên tới vài trăm triệu, trong khi các điểm số nhân tố lại dao động quanh mức trung bình bằng không với phương sai bằng một-việc trực tiếp sử dụng khoảng cách Euclidean trên dữ liệu thô sẽ khiến các biến có giá trị số học lớn áp đảo hoàn toàn các biến có giá trị nhỏ. Chúng ta sử dụng StandardScaler của scikit-learn để chuẩn hóa tất cả các biến đặc trưng về dạng phân phối có trung bình bằng không và độ lệch chuẩn bằng một theo công thức toán học <span class="math notranslate nohighlight">\(z = \frac{x - \mu}{\sigma}\)</span>.</p>
@@ -947,7 +939,9 @@ Huu_tri_An_toan       251    0    0    0
 Tiet_kiem_Pho_thong     0  238   59    0
 
 Bảng phân bố chéo giữa phân đoạn thực tế và cụm GMM:
-GMM_Cluster             0    1    2    3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GMM_Cluster             0    1    2    3
 TrueSegment                             
 Doanh_nhan_Thanh_dat    0    0  148    0
 Gioi_tre_Tieu_hoang   301    0    0    3
@@ -975,19 +969,19 @@ Tiet_kiem_Pho_thong     6    0    0  291
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Thông tin 5 khách hàng nằm ở ranh giới giữa các phân khúc:
-     CustomerID  Age     Income          TrueSegment  GMM_Cluster  \
-460         461   27  26.037980  Gioi_tre_Tieu_hoang            3   
-82           83   22  27.157361  Gioi_tre_Tieu_hoang            0   
-317         318   31  34.094608  Gioi_tre_Tieu_hoang            3   
-919         920   24  33.033033  Tiet_kiem_Pho_thong            3   
-871         872   23  23.696354  Tiet_kiem_Pho_thong            0   
+    CustomerID  Age     Income          TrueSegment  GMM_Cluster  GMM_Entropy  \
+460        461   27  26.037980  Gioi_tre_Tieu_hoang            3     0.692753   
+82          83   22  27.157361  Gioi_tre_Tieu_hoang            0     0.691746   
+317        318   31  34.094608  Gioi_tre_Tieu_hoang            3     0.690380   
+919        920   24  33.033033  Tiet_kiem_Pho_thong            3     0.689716   
+871        872   23  23.696354  Tiet_kiem_Pho_thong            0     0.689066   
 
-     GMM_Entropy  GMM_Prob_Cluster_0  GMM_Prob_Cluster_1  GMM_Prob_Cluster_2  \
-460     0.692753            0.485969        7.466565e-21        3.374558e-48   
-82      0.691746            0.526462        1.655251e-21        2.248383e-43   
-317     0.690380            0.462821        3.878798e-16        2.429929e-39   
-919     0.689716            0.458607        1.367953e-25        3.430143e-69   
-871     0.689066            0.545143        8.406295e-24        3.075247e-51   
+     GMM_Prob_Cluster_0  GMM_Prob_Cluster_1  GMM_Prob_Cluster_2  \
+460            0.485969        7.466565e-21        3.374558e-48   
+82             0.526462        1.655251e-21        2.248383e-43   
+317            0.462821        3.878798e-16        2.429929e-39   
+919            0.458607        1.367953e-25        3.430143e-69   
+871            0.545143        8.406295e-24        3.075247e-51   
 
      GMM_Prob_Cluster_3  
 460            0.514031  

@@ -742,6 +742,7 @@ memory usage: 97.8+ KB
 
 <span class="c1"># Nạp dữ liệu từ tệp tin thô vào bộ nhớ để bắt đầu quy trình làm sạch</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;images/financial_reports_raw.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;company_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;company_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 
 <span class="c1"># Tiến hành cô lập biến mục tiêu dự đoán khỏi nhóm biến đặc trưng đầu vào</span>
 <span class="c1"># Biến operating_margin được chọn làm mục tiêu dự đoán cho mô hình hồi quy</span>

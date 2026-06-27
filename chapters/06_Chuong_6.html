@@ -601,7 +601,9 @@ document.write(`
 <span class="n">sales_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;..\case_studies\01_marketing_campaign\sales_forecasting.csv&quot;</span>
 
 <span class="n">df_roi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">roi_path</span><span class="p">)</span>
+<span class="n">df_roi</span><span class="p">[</span><span class="s1">&#39;Day_ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_roi</span><span class="p">[</span><span class="s1">&#39;Day_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 <span class="n">df_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sales_path</span><span class="p">)</span>
+<span class="n">df_sales</span><span class="p">[</span><span class="s1">&#39;Day_ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_sales</span><span class="p">[</span><span class="s1">&#39;Day_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kích thước dữ liệu chiến dịch tiếp thị:&quot;</span><span class="p">,</span> <span class="n">df_roi</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kích thước dữ liệu dự báo doanh số cửa hàng:&quot;</span><span class="p">,</span> <span class="n">df_sales</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -657,12 +659,12 @@ RangeIndex: 1000 entries, 0 to 999
 Data columns (total 4 columns):
  #   Column             Non-Null Count  Dtype  
 ---  ------             --------------  -----  
- 0   Day_ID             1000 non-null   int64  
+ 0   Day_ID             1000 non-null   object 
  1   Seasonality_Index  1000 non-null   float64
  2   Ad_Spend           1000 non-null   float64
  3   Revenue            1000 non-null   float64
-dtypes: float64(3), int64(1)
-memory usage: 31.4 KB
+dtypes: float64(3), object(1)
+memory usage: 31.4+ KB
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -683,7 +685,6 @@ memory usage: 31.4 KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Day_ID</th>
       <th>Seasonality_Index</th>
       <th>Ad_Spend</th>
       <th>Revenue</th>
@@ -695,61 +696,53 @@ memory usage: 31.4 KB
       <td>1000.000000</td>
       <td>1000.000000</td>
       <td>1000.000000</td>
-      <td>1000.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>500.500000</td>
       <td>0.490257</td>
       <td>100.014614</td>
       <td>397.513485</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>288.819436</td>
       <td>0.292137</td>
       <td>30.410873</td>
       <td>136.709335</td>
     </tr>
     <tr>
       <th>min</th>
-      <td>1.000000</td>
       <td>0.004632</td>
       <td>30.288281</td>
       <td>117.283260</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>250.750000</td>
       <td>0.235973</td>
       <td>74.344344</td>
       <td>281.068169</td>
     </tr>
     <tr>
       <th>50%</th>
-      <td>500.500000</td>
       <td>0.496807</td>
       <td>100.463386</td>
       <td>397.868619</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>750.250000</td>
       <td>0.744320</td>
       <td>125.085715</td>
       <td>511.397043</td>
     </tr>
     <tr>
       <th>max</th>
-      <td>1000.000000</td>
       <td>0.999718</td>
       <td>170.507183</td>
       <td>704.473222</td>
     </tr>
   </tbody>
 </table>
-</div></div><img alt="../_images/6fb8ee1e3c3ea21dc53b7f6c088c9f45097c1fa21a9479381c17ad13b8beff34.png" src="../_images/6fb8ee1e3c3ea21dc53b7f6c088c9f45097c1fa21a9479381c17ad13b8beff34.png" />
-<img alt="../_images/28b69c804b4e51f13893e8e488e54fe4af5651aa1726bacca717e80dc42560c6.png" src="../_images/28b69c804b4e51f13893e8e488e54fe4af5651aa1726bacca717e80dc42560c6.png" />
+</div></div><img alt="../_images/7a02912154488f0fff8ae9c68ea2d205af45e46b767a14b13236931d164dde06.png" src="../_images/7a02912154488f0fff8ae9c68ea2d205af45e46b767a14b13236931d164dde06.png" />
+<img alt="../_images/def80dd03f2c86658765ff265bad4bdbf0534b0ebcbd6f4bfe00105b15725782.png" src="../_images/def80dd03f2c86658765ff265bad4bdbf0534b0ebcbd6f4bfe00105b15725782.png" />
 </div>
 </div>
 <p>Bộ dữ liệu chiến dịch tiếp thị chứa bốn cột bao gồm Day_ID, Seasonality_Index (chỉ số mùa vụ), Ad_Spend (chi phí quảng cáo), và Revenue (doanh thu). Bộ dữ liệu dự báo doanh số cửa hàng chứa chín cột bao gồm thông tin vùng miền Region, chi phí quảng cáo Ad_Spend, chỉ số giá cả Price_Index, chỉ số giá đối thủ Competitor_Price, quy mô cửa hàng Store_Size, lượng truy cập trực tuyến Online_Traffic, chỉ thị khuyến mại Promotion_Active, và biến kết quả Sales. Trước khi tiến hành phân tích sâu, chúng ta sẽ chạy thí nghiệm đầu tiên để minh họa hiện tượng Omitted Variable Bias số (OVB) trên bộ dữ liệu tiếp thị. Chúng ta thực hiện hồi quy đơn biến doanh thu theo chi phí quảng cáo, sau đó thực hiện hồi quy bội đưa thêm chỉ số mùa vụ vào làm biến kiểm soát để đối chiếu sự thay đổi của hệ số hồi quy.</p>
@@ -831,8 +824,8 @@ Residual   1.570682e+06  997.0        NaN           NaN
 Dep. Variable:                  Sales   R-squared:                       0.866
 Model:                            OLS   Adj. R-squared:                  0.865
 Method:                 Least Squares   F-statistic:                     801.4
-Date:                Fri, 26 Jun 2026   Prob (F-statistic):               0.00
-Time:                        22:12:01   Log-Likelihood:                -4118.6
+Date:                Sat, 27 Jun 2026   Prob (F-statistic):               0.00
+Time:                        22:57:44   Log-Likelihood:                -4118.6
 No. Observations:                1000   AIC:                             8255.
 Df Residuals:                     991   BIC:                             8299.
 Df Model:                           8                                         
