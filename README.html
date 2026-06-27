@@ -332,6 +332,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cau-truc-thu-muc-du-an">🗂 Cấu trúc thư mục dự án</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huong-dan-cai-dat-va-su-dung">🚀 Hướng dẫn cài đặt và sử dụng</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-phien-ban-sach-web-html-book">📚 Build phiên bản Sách Web (HTML Book)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xuat-ban-len-github-pages">🌐 Xuất bản lên GitHub Pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luu-y-ve-phien-ban-versioning">💡 Lưu ý về phiên bản (Versioning)</a></li>
 </ul>
             </nav>
@@ -394,15 +395,28 @@ Khuyến nghị bạn tạo một môi trường ảo (virtual environment) trư
 </section>
 <section id="build-phien-ban-sach-web-html-book">
 <h2>📚 Build phiên bản Sách Web (HTML Book)<a class="headerlink" href="#build-phien-ban-sach-web-html-book" title="Permalink to this heading">#</a></h2>
-<p>Kho lưu trữ này được tích hợp sẵn cấu hình <strong>Jupyter Book</strong> để chuyển đổi toàn bộ mã nguồn thành một website học liệu trực quan. Để tự build sách HTML trên máy của bạn:</p>
+<p>Kho lưu trữ này được tích hợp sẵn cấu hình <strong>Jupyter Book</strong> để chuyển đổi toàn bộ mã nguồn thành một website học liệu trực quan. Để tự build sách HTML trên máy của bạn, hãy chạy lệnh <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> trong terminal để biên dịch toàn bộ dự án thành định dạng HTML:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Di chuyển vào thư mục dự án</span>
 <span class="nb">cd</span><span class="w"> </span>amsa_book
 
-<span class="c1"># Build thư mục my_book/</span>
-jupyter-book<span class="w"> </span>build<span class="w"> </span>my_book/
+<span class="c1"># Biên dịch toàn bộ dự án thành định dạng HTML</span>
+jupyter-book<span class="w"> </span>build<span class="w"> </span>.
 </pre></div>
 </div>
-<p>Sau khi quá trình build kết thúc thành công, bạn chỉ cần mở file <code class="docutils literal notranslate"><span class="pre">my_book/_build/html/index.html</span></code> trên trình duyệt web để bắt đầu đọc sách!</p>
+<p>Sau khi quá trình build kết thúc thành công, bạn chỉ cần mở file <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> trên trình duyệt web để bắt đầu đọc sách!</p>
+</section>
+<section id="xuat-ban-len-github-pages">
+<h2>🌐 Xuất bản lên GitHub Pages<a class="headerlink" href="#xuat-ban-len-github-pages" title="Permalink to this heading">#</a></h2>
+<p>Hãy chạy lệnh git để commit toàn bộ thay đổi mới nhất. Sau đó, sử dụng thư viện ghp-import (lệnh: <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code>) để đẩy thư mục HTML này lên nhánh <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> trên kho lưu trữ GitHub của dự án:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Thêm và commit các thay đổi</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update book&quot;</span>
+git<span class="w"> </span>push
+
+<span class="c1"># Đẩy thư mục HTML lên nhánh gh-pages</span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+</pre></div>
+</div>
 </section>
 <section id="luu-y-ve-phien-ban-versioning">
 <h2>💡 Lưu ý về phiên bản (Versioning)<a class="headerlink" href="#luu-y-ve-phien-ban-versioning" title="Permalink to this heading">#</a></h2>
@@ -464,6 +478,7 @@ jupyter-book<span class="w"> </span>build<span class="w"> </span>my_book/
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cau-truc-thu-muc-du-an">🗂 Cấu trúc thư mục dự án</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#huong-dan-cai-dat-va-su-dung">🚀 Hướng dẫn cài đặt và sử dụng</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-phien-ban-sach-web-html-book">📚 Build phiên bản Sách Web (HTML Book)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xuat-ban-len-github-pages">🌐 Xuất bản lên GitHub Pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#luu-y-ve-phien-ban-versioning">💡 Lưu ý về phiên bản (Versioning)</a></li>
 </ul>
   </nav></div>

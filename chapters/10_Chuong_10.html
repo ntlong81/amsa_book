@@ -348,7 +348,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boosting-gradient-boosting-xgboost">10.2.2. Boosting: Gradient Boosting, XGBoost</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#triet-ly-cua-boosting-va-su-khac-biet-voi-bagging">1. Triết lý của Boosting và sự khác biệt với Bagging</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#co-che-toan-hoc-cua-gradient-boosting">2. Cơ chế toán học của Gradient Boosting</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-extreme-gradient-boosting-dinh-cao-toi-uu-cho-du-lieu-dang-bang">3. XGBoost (Extreme Gradient Boosting) — Đỉnh cao tối ưu cho dữ liệu dạng bảng</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-extreme-gradient-boosting-dinh-cao-toi-uu-cho-du-lieu-dang-bang">3. XGBoost (Extreme Gradient Boosting) - Đỉnh cao tối ưu cho dữ liệu dạng bảng</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-khai-trien-taylor-bac-hai-second-order-taylor-expansion">A. Khai triển Taylor bậc hai (Second-Order Taylor Expansion)</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#b-thanh-phan-phat-regularization-trong-ham-muc-tieu">B. Thành phần phạt Regularization trong Hàm mục tiêu</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#c-cong-thuc-tinh-trong-so-la-va-diem-chia-nhanh-toi-uu">C. Công thức tính Trọng số lá và Điểm chia nhánh tối ưu</a></li>
@@ -369,9 +369,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cac-chien-luoc-tim-kiem-sieu-tham-so-grid-search-vs-randomized-search">10.3.3. Các chiến lược Tìm kiếm Siêu tham số: Grid Search vs. Randomized Search</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-search-tim-kiem-luoi-vet-can-gridsearchcv">1. Grid Search (Tìm kiếm lưới vét cạn) — GridSearchCV</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#randomized-search-tim-kiem-ngau-nhien-randomizedsearchcv">2. Randomized Search (Tìm kiếm ngẫu nhiên) — RandomizedSearchCV</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#toi-uu-hoa-bayes-bayesian-optimization-huong-tiep-can-hien-dai">3. Tối ưu hóa Bayes (Bayesian Optimization) — Hướng tiếp cận hiện đại</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-search-tim-kiem-luoi-vet-can-gridsearchcv">1. Grid Search (Tìm kiếm lưới vét cạn) - GridSearchCV</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#randomized-search-tim-kiem-ngau-nhien-randomizedsearchcv">2. Randomized Search (Tìm kiếm ngẫu nhiên) - RandomizedSearchCV</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#toi-uu-hoa-bayes-bayesian-optimization-huong-tiep-can-hien-dai">3. Tối ưu hóa Bayes (Bayesian Optimization) - Hướng tiếp cận hiện đại</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cac-sieu-tham-so-cot-loi-cua-xgboost-va-chien-luoc-tinh-chinh-thuc-tien">10.3.4. Các Siêu tham số cốt lõi của XGBoost và Chiến lược Tinh chỉnh thực tiễn</a><ul class="nav section-nav flex-column">
@@ -452,7 +452,7 @@ document.write(`
 </section>
 <section id="gioi-han-noi-tai-cua-mo-hinh-hoi-quy-truyen-thong-logistic-regression">
 <h3>10.1.2. Giới hạn nội tại của mô hình hồi quy truyền thống (Logistic Regression)<a class="headerlink" href="#gioi-han-noi-tai-cua-mo-hinh-hoi-quy-truyen-thong-logistic-regression" title="Permalink to this heading">#</a></h3>
-<p>Trong nhiều thập kỷ, Hồi quy Logistic (Logistic Regression) — vốn đã được nghiên cứu kỹ ở Chương 7 — là công cụ tiêu chuẩn và gần như duy nhất được sử dụng trong các hệ thống chấm điểm rủi ro và phê duyệt tín dụng tại các ngân hàng thương mại nhờ vào các đặc tính ưu việt của nó. Mô hình Hồi quy Logistic ước lượng xác suất xảy ra gian lận thông qua hàm sigmoid:</p>
+<p>Trong nhiều thập kỷ, Hồi quy Logistic (Logistic Regression) - vốn đã được nghiên cứu kỹ ở Chương 7 - là công cụ tiêu chuẩn và gần như duy nhất được sử dụng trong các hệ thống chấm điểm rủi ro và phê duyệt tín dụng tại các ngân hàng thương mại nhờ vào các đặc tính ưu việt của nó. Mô hình Hồi quy Logistic ước lượng xác suất xảy ra gian lận thông qua hàm sigmoid:</p>
 <div class="math notranslate nohighlight">
 \[P(Y = 1 | \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_k X_k)}}\]</div>
 <p>Sức hấp dẫn lớn nhất của Hồi quy Logistic nằm ở tính diễn giải thống kê hiển ngôn (statistical interpretability). Các hệ số hồi quy <span class="math notranslate nohighlight">\(\beta_j\)</span> sau khi mũ hóa (exponentiation) sẽ đại diện cho tỷ số cơ hội (Odds Ratio - OR):</p>
@@ -587,7 +587,7 @@ document.write(`
 <h3>10.2.2. Boosting: Gradient Boosting, XGBoost<a class="headerlink" href="#boosting-gradient-boosting-xgboost" title="Permalink to this heading">#</a></h3>
 <section id="triet-ly-cua-boosting-va-su-khac-biet-voi-bagging">
 <h4>1. Triết lý của Boosting và sự khác biệt với Bagging<a class="headerlink" href="#triet-ly-cua-boosting-va-su-khac-biet-voi-bagging" title="Permalink to this heading">#</a></h4>
-<p>Trong khi Bagging và Random Forest hoạt động theo cơ chế <strong>tích hợp song song (parallel ensemble)</strong> — xây dựng các cây độc lập rồi gộp kết quả nhằm giảm phương sai (Variance) — thì <strong>Boosting</strong> tiếp cận bài toán theo một triết lý hoàn toàn ngược lại: <strong>tích hợp tuần tự (sequential ensemble)</strong> nhằm giảm thiểu thiên lệch (Bias).</p>
+<p>Trong khi Bagging và Random Forest hoạt động theo cơ chế <strong>tích hợp song song (parallel ensemble)</strong> - xây dựng các cây độc lập rồi gộp kết quả nhằm giảm phương sai (Variance) - thì <strong>Boosting</strong> tiếp cận bài toán theo một triết lý hoàn toàn ngược lại: <strong>tích hợp tuần tự (sequential ensemble)</strong> nhằm giảm thiểu thiên lệch (Bias).</p>
 <p>Triết lý của Boosting là biến đổi một tập hợp các mô hình học yếu (weak learners - các mô hình có độ chính xác chỉ cao hơn đoán ngẫu nhiên một chút, thường là các cây quyết định rất nông như cây 1-2 lớp) thành một mô hình học mạnh (strong learner) bằng cách huấn luyện chúng tuần tự. Mỗi cây mới trong chuỗi Boosting không được huấn luyện độc lập mà được thiết kế đặc biệt để tập trung sửa chữa những lỗi sai (residuals) mà các cây trước đó trong chuỗi đã phạm phải. Dự báo cuối cùng là tổng có trọng số của dự báo từ tất cả các cây trong chuỗi.</p>
 </section>
 <section id="co-che-toan-hoc-cua-gradient-boosting">
@@ -615,7 +615,7 @@ document.write(`
 \[F_m(\mathbf{x}) = F_{m-1}(\mathbf{x}) + \eta \gamma_m h_m(\mathbf{x})\]</div>
 </section>
 <section id="xgboost-extreme-gradient-boosting-dinh-cao-toi-uu-cho-du-lieu-dang-bang">
-<h4>3. XGBoost (Extreme Gradient Boosting) — Đỉnh cao tối ưu cho dữ liệu dạng bảng<a class="headerlink" href="#xgboost-extreme-gradient-boosting-dinh-cao-toi-uu-cho-du-lieu-dang-bang" title="Permalink to this heading">#</a></h4>
+<h4>3. XGBoost (Extreme Gradient Boosting) - Đỉnh cao tối ưu cho dữ liệu dạng bảng<a class="headerlink" href="#xgboost-extreme-gradient-boosting-dinh-cao-toi-uu-cho-du-lieu-dang-bang" title="Permalink to this heading">#</a></h4>
 <p>Mặc dù Gradient Boosting truyền thống rất mạnh, nó gặp phải các hạn chế về mặt tốc độ tính toán khi xử lý dữ liệu lớn và không tích hợp sẵn cơ chế kiểm soát overfitting nghiêm ngặt trong hàm mục tiêu. <strong>XGBoost (Extreme Gradient Boosting)</strong>, được phát triển bởi Tianqi Chen năm 2016, đã giải quyết triệt để các hạn chế này và trở thành thuật toán thống trị các cuộc thi khoa học dữ liệu nhờ vào các cải tiến toán học và kỹ thuật tối ưu hóa phần cứng vượt trội.</p>
 <p>Các điểm cải tiến cốt lõi của XGBoost bao gồm:</p>
 <section id="a-khai-trien-taylor-bac-hai-second-order-taylor-expansion">
@@ -772,7 +772,7 @@ document.write(`
 <h3>10.3.3. Các chiến lược Tìm kiếm Siêu tham số: Grid Search vs. Randomized Search<a class="headerlink" href="#cac-chien-luoc-tim-kiem-sieu-tham-so-grid-search-vs-randomized-search" title="Permalink to this heading">#</a></h3>
 <p>Khi đã thiết lập cấu trúc đánh giá bằng K-Fold CV, câu hỏi tiếp theo là: Làm thế nào để duyệt qua không gian các siêu tham số để tìm ra tổ hợp tốt nhất? Hai chiến lược phổ biến nhất trong thực tiễn là <strong>Grid Search</strong> và <strong>Randomized Search</strong>.</p>
 <section id="grid-search-tim-kiem-luoi-vet-can-gridsearchcv">
-<h4>1. Grid Search (Tìm kiếm lưới vét cạn) — GridSearchCV<a class="headerlink" href="#grid-search-tim-kiem-luoi-vet-can-gridsearchcv" title="Permalink to this heading">#</a></h4>
+<h4>1. Grid Search (Tìm kiếm lưới vét cạn) - GridSearchCV<a class="headerlink" href="#grid-search-tim-kiem-luoi-vet-can-gridsearchcv" title="Permalink to this heading">#</a></h4>
 <p>Grid Search là phương pháp tìm kiếm vét cạn (brute-force search). Nhà nghiên cứu định nghĩa một danh sách các giá trị cụ thể cho từng siêu tham số cần tối ưu hóa. Thuật toán sẽ tạo ra một lưới tích Descartes (Cartesian product) chứa tất cả các tổ hợp khả dĩ của các giá trị này, và tiến hành đánh giá hiệu năng kiểm định chéo cho từng tổ hợp một.</p>
 <p>Giả sử chúng ta cần tinh chỉnh mô hình XGBoost với 3 siêu tham số:</p>
 <ul class="simple">
@@ -783,14 +783,14 @@ document.write(`
 <p>Tổng số tổ hợp siêu tham số trong lưới là <span class="math notranslate nohighlight">\(3 \times 3 \times 3 = 27\)</span> tổ hợp. Nếu chúng ta áp dụng 5-fold Cross-Validation, hệ thống sẽ phải huấn luyện mô hình tổng cộng <span class="math notranslate nohighlight">\(27 \times 5 = 135\)</span> lần. Nếu số lượng siêu tham số tăng lên thành 5 và mỗi tham số thử 5 giá trị, số tổ hợp là <span class="math notranslate nohighlight">\(5^5 = 3.125\)</span>, kết hợp với 5-fold CV sẽ cần huấn luyện mô hình tới <span class="math notranslate nohighlight">\(15.625\)</span> lần. Hiện tượng này được gọi là <strong>Sự bùng nổ tổ hợp (Combinatorial Explosion)</strong>. Đối với các mô hình tốn thời gian huấn luyện trên dữ liệu lớn, Grid Search trở nên bất khả thi về mặt thời gian và tài nguyên tính toán.</p>
 </section>
 <section id="randomized-search-tim-kiem-ngau-nhien-randomizedsearchcv">
-<h4>2. Randomized Search (Tìm kiếm ngẫu nhiên) — RandomizedSearchCV<a class="headerlink" href="#randomized-search-tim-kiem-ngau-nhien-randomizedsearchcv" title="Permalink to this heading">#</a></h4>
+<h4>2. Randomized Search (Tìm kiếm ngẫu nhiên) - RandomizedSearchCV<a class="headerlink" href="#randomized-search-tim-kiem-ngau-nhien-randomizedsearchcv" title="Permalink to this heading">#</a></h4>
 <p>Để giải quyết hạn chế về mặt tính toán của Grid Search, James Bergstra và Yoshua Bengio đã xuất bản bài báo kinh điển năm 2012 chứng minh rằng: <strong>Randomized Search (Tìm kiếm ngẫu nhiên) hiệu quả hơn Grid Search trong việc tối ưu hóa siêu tham số</strong>.</p>
 <p>Thay vì duyệt qua tất cả các tổ hợp trên một lưới xác định trước, Randomized Search chọn ngẫu nhiên một số lượng cố định các tổ hợp (được xác định bởi tham số <code class="docutils literal notranslate"><span class="pre">n_iter</span></code>) từ các phân phối xác suất được thiết lập cho từng siêu tham số. Ví dụ, thay vì chỉ thử <code class="docutils literal notranslate"><span class="pre">learning_rate</span></code> tại 3 điểm cố định, chúng ta có thể thiết lập <code class="docutils literal notranslate"><span class="pre">learning_rate</span></code> tuân theo một phân phối liên tục (như phân phối đều logarit - log-uniform distribution) trong khoảng <span class="math notranslate nohighlight">\([0.001, 0.3]\)</span>.</p>
 <p>Tại sao Randomized Search lại hiệu quả hơn? Bergstra và Bengio chứng minh rằng trong thực tế, các siêu tham số có tầm ảnh hưởng rất khác nhau đến hiệu năng mô hình (được gọi là <strong>Low Effective Dimension</strong>). Ví dụ, đối với XGBoost, <code class="docutils literal notranslate"><span class="pre">learning_rate</span></code> và <code class="docutils literal notranslate"><span class="pre">max_depth</span></code> ảnh hưởng cực kỳ mạnh (important dimensions), trong khi một số tham số khác có ảnh hưởng rất nhỏ (unimportant dimensions).</p>
 <p>Hãy so sánh việc thử nghiệm 9 tổ hợp bằng Grid Search trên lưới <span class="math notranslate nohighlight">\(3 \times 3\)</span> so với 9 lần chọn ngẫu nhiên. Với Grid Search, chúng ta chỉ thực tế thử nghiệm 3 giá trị khác nhau cho tham số quan trọng 1 (vì mỗi giá trị được lặp lại 3 lần với các giá trị khác nhau của tham số 2). Ngược lại, với Randomized Search, chúng ta thử nghiệm 9 giá trị khác nhau hoàn toàn cho cả hai tham số. Điều này giúp tăng xác suất tìm thấy các đỉnh tối ưu cục bộ trong không gian siêu tham số mà không làm tăng chi phí tính toán.</p>
 </section>
 <section id="toi-uu-hoa-bayes-bayesian-optimization-huong-tiep-can-hien-dai">
-<h4>3. Tối ưu hóa Bayes (Bayesian Optimization) — Hướng tiếp cận hiện đại<a class="headerlink" href="#toi-uu-hoa-bayes-bayesian-optimization-huong-tiep-can-hien-dai" title="Permalink to this heading">#</a></h4>
+<h4>3. Tối ưu hóa Bayes (Bayesian Optimization) - Hướng tiếp cận hiện đại<a class="headerlink" href="#toi-uu-hoa-bayes-bayesian-optimization-huong-tiep-can-hien-dai" title="Permalink to this heading">#</a></h4>
 <p>Bên cạnh Grid và Randomized Search, các công cụ hiện đại thường sử dụng <strong>Tối ưu hóa Bayes (Bayesian Optimization)</strong>. Hướng tiếp cận này xem việc tìm kiếm siêu tham số là một bài toán tối ưu hóa hộp đen. Thay vì chọn ngẫu nhiên, thuật toán xây dựng một mô hình surrogate (thường là Gaussian Process hoặc Tree-structured Parzen Estimators - TPE) để dự báo hiệu năng của các bộ siêu tham số chưa thử nghiệm dựa trên kết quả của các bộ tham số đã chạy trước đó. Từ đó, thuật toán chọn bộ siêu tham số tiếp theo bằng cách cân bằng giữa việc khai thác vùng không gian tốt đã biết (exploitation) và khám phá vùng không gian mới chưa biết (exploration). Các thư viện phổ biến như <code class="docutils literal notranslate"><span class="pre">Optuna</span></code> hay <code class="docutils literal notranslate"><span class="pre">Hyperopt</span></code> triển khai cơ chế này rất hiệu quả.</p>
 </section>
 </section>
@@ -821,7 +821,7 @@ document.write(`
 </section>
 <section id="mo-hop-den-voi-explainable-ai-xai">
 <h2>10.4. Mở “Hộp đen” với Explainable AI (XAI)<a class="headerlink" href="#mo-hop-den-voi-explainable-ai-xai" title="Permalink to this heading">#</a></h2>
-<p>Sự phát triển vượt bậc của các thuật toán học máy phi tuyến phức tạp như Random Forest và XGBoost đã tạo ra một khoảng cách lớn giữa hiệu năng dự báo và tính minh bạch của mô hình. Trong khi các mô hình thống kê cổ điển như Hồi quy Tuyến tính hay Hồi quy Logistic hoạt động như các “hộp kính” (glass-box models) — cho phép chúng ta nhìn rõ cơ chế hoạt động bên trong thông qua các hệ số hồi quy và các kiểm định thống kê rõ ràng — thì các mô hình học máy hiện đại lại thường được xem là các “hộp đen” (black-box models). Quyết định dự báo được đưa ra thông qua hàng trăm cây quyết định phức tạp với các tương tác phi tuyến đa chiều, khiến con người hầu như không thể dò lại dấu vết logic của từng dự báo.</p>
+<p>Sự phát triển vượt bậc của các thuật toán học máy phi tuyến phức tạp như Random Forest và XGBoost đã tạo ra một khoảng cách lớn giữa hiệu năng dự báo và tính minh bạch của mô hình. Trong khi các mô hình thống kê cổ điển như Hồi quy Tuyến tính hay Hồi quy Logistic hoạt động như các “hộp kính” (glass-box models) - cho phép chúng ta nhìn rõ cơ chế hoạt động bên trong thông qua các hệ số hồi quy và các kiểm định thống kê rõ ràng - thì các mô hình học máy hiện đại lại thường được xem là các “hộp đen” (black-box models). Quyết định dự báo được đưa ra thông qua hàng trăm cây quyết định phức tạp với các tương tác phi tuyến đa chiều, khiến con người hầu như không thể dò lại dấu vết logic của từng dự báo.</p>
 <p>Để giải quyết thách thức này, lĩnh vực <strong>Explainable AI - XAI được (Explainable AI - XAI)</strong> đã ra đời và phát triển mạnh mẽ. XAI cung cấp các phương pháp toán học giúp diễn giải và làm sáng tỏ cơ chế ra quyết định của các mô hình hộp đen phức tạp, giúp các nhà nghiên cứu, kiểm toán viên và người dùng cuối tin tưởng, phê duyệt và vận hành các mô hình này trong thực tế.</p>
 <section id="phan-loai-cac-phuong-phap-giai-thich-mo-hinh">
 <h3>10.4.1. Phân loại các Phương pháp Giải thích Mô hình<a class="headerlink" href="#phan-loai-cac-phuong-phap-giai-thich-mo-hinh" title="Permalink to this heading">#</a></h3>
@@ -837,7 +837,7 @@ document.write(`
 <h4>2. Tính độc lập với mô hình: Model-Specific vs. Model-Agnostic<a class="headerlink" href="#tinh-doc-lap-voi-mo-hinh-model-specific-vs-model-agnostic" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Model-Specific (Phụ thuộc vào mô hình cụ thể):</strong> Các phương pháp được thiết kế riêng cho một kiến trúc mô hình nhất định và không thể áp dụng cho các mô hình khác. Ví dụ: các hệ số hồi quy chỉ có trong mô hình tuyến tính; biểu đồ cấu trúc cây chỉ có trong mô hình dựa trên cây; phương pháp lan truyền ngược gradient (Grad-CAM) chỉ áp dụng cho mạng nơ-ron tích chập (CNN).</p></li>
-<li><p><strong>Model-Agnostic (Độc lập với mô hình):</strong> Các phương pháp đối xử với mô hình học máy như một hộp đen hoàn chỉnh — chúng chỉ cần quyền truy cập vào dữ liệu đầu vào và kết quả đầu ra (dự báo) của mô hình mà không cần quan tâm đến cấu trúc thuật toán bên trong. Đặc tính này cho phép nhà nghiên cứu áp dụng cùng một phương pháp giải thích cho bất kỳ mô hình nào, từ Hồi quy Logistic, Random Forest, XGBoost đến mạng Deep Learning phức tạp. Điều này cho phép so sánh trực tiếp logic của các mô hình khác nhau trên cùng một hệ quy chiếu.</p></li>
+<li><p><strong>Model-Agnostic (Độc lập với mô hình):</strong> Các phương pháp đối xử với mô hình học máy như một hộp đen hoàn chỉnh - chúng chỉ cần quyền truy cập vào dữ liệu đầu vào và kết quả đầu ra (dự báo) của mô hình mà không cần quan tâm đến cấu trúc thuật toán bên trong. Đặc tính này cho phép nhà nghiên cứu áp dụng cùng một phương pháp giải thích cho bất kỳ mô hình nào, từ Hồi quy Logistic, Random Forest, XGBoost đến mạng Deep Learning phức tạp. Điều này cho phép so sánh trực tiếp logic của các mô hình khác nhau trên cùng một hệ quy chiếu.</p></li>
 </ul>
 <p>Trong phần này, chúng ta sẽ khảo sát chi tiết hai phương pháp giải thích Model-Agnostic nổi tiếng nhất hiện nay: LIME (tiếp cận bằng việc giả lập tuyến tính cục bộ) và SHAP (tiếp cận bằng lý thuyết trò chơi hợp tác).</p>
 </section>
@@ -896,7 +896,7 @@ document.write(`
 <p>Để giải quyết triệt để vấn đề không ổn định và thiếu cơ sở toán học chặt chẽ của LIME, Scott Lundberg và Su-In Lee đã giới thiệu framework <strong>SHAP (SHapley Additive exPlanations)</strong> vào năm 2017. SHAP được xây dựng trên nền tảng toán học vô cùng vững chắc của <strong>Lý thuyết trò chơi hợp tác (Cooperative Game Theory)</strong>, cụ thể là khái niệm <strong>Giá trị Shapley (Shapley Value)</strong> do Lloyd Shapley đề xuất năm 1953 (nghiên cứu đã giúp ông giành giải thưởng Nobel Kinh tế năm 2012).</p>
 <p>Để hiểu trực giác, hãy tưởng tượng một dự án khởi nghiệp công nghệ có 3 người đồng sáng lập (các biến số đầu vào <span class="math notranslate nohighlight">\(X_1, X_2, X_3\)</span>). Sau một năm hoạt động, dự án được định giá và tạo ra doanh thu 10 triệu USD (dự báo của mô hình <span class="math notranslate nohighlight">\(f(\mathbf{x})\)</span>). Làm thế nào để phân chia 10 triệu USD này một cách công bằng cho từng người sáng lập dựa trên đóng góp thực tế của họ? Đây chính xác là bài toán phân bổ giá trị trong lý thuyết trò chơi hợp tác. Trong học máy, giải thưởng chính là giá trị dự báo khác biệt của mô hình so với kỳ vọng trung bình, và người chơi chính là các biến số đầu vào.</p>
 <p>Về mặt toán học, gọi <span class="math notranslate nohighlight">\(N\)</span> là tập hợp tất cả <span class="math notranslate nohighlight">\(d\)</span> tính năng trong mô hình (<span class="math notranslate nohighlight">\(|N| = d\)</span>). Ký hiệu <span class="math notranslate nohighlight">\(S\)</span> là một tập con các tính năng không chứa tính năng <span class="math notranslate nohighlight">\(i\)</span> (<span class="math notranslate nohighlight">\(S \subseteq N \setminus \{i\}\)</span>). Gọi <span class="math notranslate nohighlight">\(v(S)\)</span> là hàm giá trị (dự báo của mô hình khi chỉ sử dụng các tính năng trong tập hợp <span class="math notranslate nohighlight">\(S\)</span>).</p>
-<p>Giá trị Shapley của tính năng <span class="math notranslate nohighlight">\(i\)</span> — ký hiệu là <span class="math notranslate nohighlight">\(\phi_i(v)\)</span> — đại diện cho phần đóng góp công bằng của tính năng <span class="math notranslate nohighlight">\(i\)</span> được tính bằng công thức:</p>
+<p>Giá trị Shapley của tính năng <span class="math notranslate nohighlight">\(i\)</span> - ký hiệu là <span class="math notranslate nohighlight">\(\phi_i(v)\)</span> - đại diện cho phần đóng góp công bằng của tính năng <span class="math notranslate nohighlight">\(i\)</span> được tính bằng công thức:</p>
 <div class="math notranslate nohighlight">
 \[\phi_i(v) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (|N| - |S| - 1)!}{|N|!} \left[ v(S \cup \{i\}) - v(S) \right]\]</div>
 <p>Ý nghĩa của từng thành phần trong công thức:</p>
@@ -996,7 +996,7 @@ document.write(`
 </section>
 <section id="b-treeshap-toi-uu-hoa-rieng-cho-mo-hinh-dua-tren-cay">
 <h5>B. TreeSHAP (Tối ưu hóa riêng cho mô hình dựa trên cây)<a class="headerlink" href="#b-treeshap-toi-uu-hoa-rieng-cho-mo-hinh-dua-tren-cay" title="Permalink to this heading">#</a></h5>
-<p>Mặc dù KernelSHAP rất linh hoạt, nó vẫn đòi hỏi việc chạy lại mô hình hộp đen hàng nghìn lần cho mỗi quan sát cần giải thích, gây chậm trễ khi giải thích số lượng lớn dữ liệu. Để giải quyết vấn đề này, Lundberg và cộng sự đã phát triển <strong>TreeSHAP</strong> vào năm 2020 — một thuật toán tối ưu hóa dành riêng cho các mô hình dựa trên cây (như Random Forest, Gradient Boosting, và XGBoost).</p>
+<p>Mặc dù KernelSHAP rất linh hoạt, nó vẫn đòi hỏi việc chạy lại mô hình hộp đen hàng nghìn lần cho mỗi quan sát cần giải thích, gây chậm trễ khi giải thích số lượng lớn dữ liệu. Để giải quyết vấn đề này, Lundberg và cộng sự đã phát triển <strong>TreeSHAP</strong> vào năm 2020 - một thuật toán tối ưu hóa dành riêng cho các mô hình dựa trên cây (như Random Forest, Gradient Boosting, và XGBoost).</p>
 <p>TreeSHAP tận dụng cấu trúc phân cấp sẵn có của cây quyết định để tính toán chính xác các kỳ vọng toán học. Thay vì duyệt qua tất cả các liên minh một cách độc lập, TreeSHAP duyệt đồng thời qua tất cả các nhánh của cây và tính toán tỷ lệ các quan sát rơi vào mỗi lá khi các tính năng bị loại bỏ. Thuật toán này làm giảm độ phức tạp tính toán từ mức hàm mũ <span class="math notranslate nohighlight">\(O(T L 2^d)\)</span> xuống mức đa thức:</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{O}(T L D^2)\]</div>
@@ -1484,7 +1484,7 @@ Confusion Matrix:
 <span class="c1"># 1. Vẽ biểu đồ Summary Plot (Beeswarm Plot) để xem tầm quan trọng toàn cục và chiều hướng tác động</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">shap</span><span class="o">.</span><span class="n">plots</span><span class="o">.</span><span class="n">beeswarm</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">max_display</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Biểu đồ SHAP Summary Plot — Phân tích tầm quan trọng toàn cục&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Biểu đồ SHAP Summary Plot - Phân tích tầm quan trọng toàn cục&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
@@ -1497,7 +1497,7 @@ Confusion Matrix:
     <span class="c1"># 2. Vẽ biểu đồ Waterfall Plot cho giao dịch gian lận cụ thể này</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
     <span class="n">shap</span><span class="o">.</span><span class="n">plots</span><span class="o">.</span><span class="n">waterfall</span><span class="p">(</span><span class="n">shap_values</span><span class="p">[</span><span class="n">selected_idx</span><span class="p">],</span> <span class="n">max_display</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Biểu đồ SHAP Waterfall Plot — Giải thích cục bộ giao dịch Gian lận (Mẫu #</span><span class="si">{</span><span class="n">selected_idx</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Biểu đồ SHAP Waterfall Plot - Giải thích cục bộ giao dịch Gian lận (Mẫu #</span><span class="si">{</span><span class="n">selected_idx</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> 
               <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1512,7 +1512,7 @@ Confusion Matrix:
     
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
     <span class="n">shap</span><span class="o">.</span><span class="n">plots</span><span class="o">.</span><span class="n">force</span><span class="p">(</span><span class="n">shap_values</span><span class="p">[</span><span class="n">selected_idx</span><span class="p">],</span> <span class="n">matplotlib</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Biểu đồ SHAP Force Plot — Giải thích cục bộ giao dịch Gian lận (Mẫu #</span><span class="si">{</span><span class="n">selected_idx</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Biểu đồ SHAP Force Plot - Giải thích cục bộ giao dịch Gian lận (Mẫu #</span><span class="si">{</span><span class="n">selected_idx</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> 
               <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1522,12 +1522,12 @@ Confusion Matrix:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9d575c98a7081412b27a026fe2a9e1ae635268798145893179f04c2277eaa736.png" src="../_images/9d575c98a7081412b27a026fe2a9e1ae635268798145893179f04c2277eaa736.png" />
-<img alt="../_images/746a7812df45b1b413b8fa421d1ac62f21e9503a974c64c468c4365e0002aee8.png" src="../_images/746a7812df45b1b413b8fa421d1ac62f21e9503a974c64c468c4365e0002aee8.png" />
+<img alt="../_images/9d50347ce6660c9478848c8a13233e8d06ea94ff2354553a388df2be0aedbd45.png" src="../_images/9d50347ce6660c9478848c8a13233e8d06ea94ff2354553a388df2be0aedbd45.png" />
+<img alt="../_images/c5b8b2f596c7dce496fd9717c03e765a45cba10b5b3baed0ba4adbe6c97ec2eb.png" src="../_images/c5b8b2f596c7dce496fd9717c03e765a45cba10b5b3baed0ba4adbe6c97ec2eb.png" />
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1200x300 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="../_images/8e3ccd562dcaacacee9f58ecb6b5dd8628f1a406173abe5eaebdb053eb7b24cb.png" src="../_images/8e3ccd562dcaacacee9f58ecb6b5dd8628f1a406173abe5eaebdb053eb7b24cb.png" />
+<img alt="../_images/293063c990a44577842b8346d02c17328fc49c27320c30fcdd0b57a08bd798b0.png" src="../_images/293063c990a44577842b8346d02c17328fc49c27320c30fcdd0b57a08bd798b0.png" />
 </div>
 </div>
 </section>
@@ -1670,7 +1670,7 @@ Confusion Matrix:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boosting-gradient-boosting-xgboost">10.2.2. Boosting: Gradient Boosting, XGBoost</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#triet-ly-cua-boosting-va-su-khac-biet-voi-bagging">1. Triết lý của Boosting và sự khác biệt với Bagging</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#co-che-toan-hoc-cua-gradient-boosting">2. Cơ chế toán học của Gradient Boosting</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-extreme-gradient-boosting-dinh-cao-toi-uu-cho-du-lieu-dang-bang">3. XGBoost (Extreme Gradient Boosting) — Đỉnh cao tối ưu cho dữ liệu dạng bảng</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-extreme-gradient-boosting-dinh-cao-toi-uu-cho-du-lieu-dang-bang">3. XGBoost (Extreme Gradient Boosting) - Đỉnh cao tối ưu cho dữ liệu dạng bảng</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-khai-trien-taylor-bac-hai-second-order-taylor-expansion">A. Khai triển Taylor bậc hai (Second-Order Taylor Expansion)</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#b-thanh-phan-phat-regularization-trong-ham-muc-tieu">B. Thành phần phạt Regularization trong Hàm mục tiêu</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#c-cong-thuc-tinh-trong-so-la-va-diem-chia-nhanh-toi-uu">C. Công thức tính Trọng số lá và Điểm chia nhánh tối ưu</a></li>
@@ -1691,9 +1691,9 @@ Confusion Matrix:
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cac-chien-luoc-tim-kiem-sieu-tham-so-grid-search-vs-randomized-search">10.3.3. Các chiến lược Tìm kiếm Siêu tham số: Grid Search vs. Randomized Search</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-search-tim-kiem-luoi-vet-can-gridsearchcv">1. Grid Search (Tìm kiếm lưới vét cạn) — GridSearchCV</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#randomized-search-tim-kiem-ngau-nhien-randomizedsearchcv">2. Randomized Search (Tìm kiếm ngẫu nhiên) — RandomizedSearchCV</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#toi-uu-hoa-bayes-bayesian-optimization-huong-tiep-can-hien-dai">3. Tối ưu hóa Bayes (Bayesian Optimization) — Hướng tiếp cận hiện đại</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-search-tim-kiem-luoi-vet-can-gridsearchcv">1. Grid Search (Tìm kiếm lưới vét cạn) - GridSearchCV</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#randomized-search-tim-kiem-ngau-nhien-randomizedsearchcv">2. Randomized Search (Tìm kiếm ngẫu nhiên) - RandomizedSearchCV</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#toi-uu-hoa-bayes-bayesian-optimization-huong-tiep-can-hien-dai">3. Tối ưu hóa Bayes (Bayesian Optimization) - Hướng tiếp cận hiện đại</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cac-sieu-tham-so-cot-loi-cua-xgboost-va-chien-luoc-tinh-chinh-thuc-tien">10.3.4. Các Siêu tham số cốt lõi của XGBoost và Chiến lược Tinh chỉnh thực tiễn</a><ul class="nav section-nav flex-column">
