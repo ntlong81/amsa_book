@@ -1,7 +1,8 @@
-# Giáo trình Thực hành Phân tích Dữ liệu và Mô hình hóa với Python
+# Giáo trình Phân tích Thống kê Đa biến Ứng dụng trong Kinh tế, Tài chính và Kinh doanh
+
+🌟 **Đọc sách trực tuyến miễn phí tại:** [https://ntlong81.github.io/amsa_book/](https://ntlong81.github.io/amsa_book/) 🌟
 
 Chào mừng bạn đến với kho lưu trữ mã nguồn và dữ liệu thực hành của dự án **Sách/Giáo trình Phân tích Dữ liệu và Mô hình hóa với Python**. Kho lưu trữ này cung cấp toàn bộ các file Jupyter Notebook, dữ liệu Case Study và môi trường để bạn có thể học tập, chạy thử nghiệm và tự tay xây dựng các báo cáo phân tích từ cơ bản đến nâng cao.
-
 ## 📖 Nội dung các chương
 
 Cuốn sách được thiết kế theo lộ trình từ tiền xử lý dữ liệu cho đến các mô hình thống kê và máy học chuyên sâu. Toàn bộ mã nguồn nằm trong thư mục `chapters/`:
