@@ -1,0 +1,29 @@
+# Book settings
+title: "Phân tích Thống kê Đa biến Ứng dụng (AMSA Book)"
+author: "Nguyễn Tiến Long & Cộng sự"
+copyright: "2026"
+
+# Execution settings
+execute:
+  execute_notebooks: cache  # Use cache to avoid re-running long-running models if unchanged
+  timeout: 600              # Increase timeout to 10 minutes for complex statistical runs
+  exclude_patterns:
+    - "scratch/*"
+    - ".gemini/*"
+    - ".agents/*"
+    - "**/.*"
+
+# HTML-specific settings
+html:
+  favicon: ""
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  extra_navbar: "Powered by <a href='https://jupyterbook.org'>Jupyter Book</a>"
+  google_analytics_id: ""
+
+# Repository settings
+repository:
+  url: "https://github.com/ntlong81/amsa_book"
+  path_to_book: ""
+  branch: main
